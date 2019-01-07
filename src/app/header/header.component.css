@@ -1,0 +1,82 @@
+#particles-js {
+  background: lightskyblue;
+  position: relative;
+  height: 750px;
+  width: 100%;
+  border-bottom: #8860d0 2px solid;
+}
+#header {
+  text-align: center;
+  width: 350px;
+  height: 140px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 175px);
+}
+#header #name {
+  color: white;
+  font-size: 48px;
+  animation: fadein 5s ease-in 0s;
+  padding-bottom: 10px;
+}
+#header #divider {
+  background: #5680e9;
+  height: 1px;
+  display: block;
+  margin: auto;
+  animation: expand 500ms ease-out 5s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  border-radius: 3px;
+}
+#header #occupation {
+  color: white;
+  font-size: 32px;
+  margin-top: 10px;
+  animation: fadein 3500ms ease-in 2000ms;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+#my-navbar {
+  margin: -100px 0 0 0;
+  padding: 25px 0;
+}
+#my-navbar .navbar-default {
+  background: transparent;
+  border: transparent;
+  margin: 0;
+}
+#my-navbar .navbar-default .navbar-nav {
+  float: none;
+  text-align: center;
+}
+#my-navbar .navbar-default .navbar-nav li {
+  margin: 0 50px;
+  float: none;
+  display: inline-block;
+}
+#my-navbar .navbar-default .navbar-nav li a {
+  font-size: 28px;
+  color: white;
+  animation: fadein 2000ms ease-in 5000ms;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+    visibility: visible;
+  }
+}

@@ -1,26 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-
-import { routing } from './app.routes';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    HeaderComponent,
     ProjectsComponent,
     AboutComponent,
-    NavBarComponent
+    ContactComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(routing)
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
