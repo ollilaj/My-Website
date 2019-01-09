@@ -1,8 +1,15 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+app-root {
+  height: 100%;
+  width: 100%;
+}
 #particles-js {
   background: lightskyblue;
   position: relative;
-  height: 750px;
-  width: 100%;
   border-bottom: #8860d0 2px solid;
 }
 #header {
@@ -10,7 +17,7 @@
   width: 350px;
   height: 140px;
   position: absolute;
-  top: calc(50% - 200px);
+  top: calc(50% - 125px);
   left: calc(50% - 175px);
 }
 #header #name {
@@ -38,6 +45,7 @@
   visibility: hidden;
 }
 #my-navbar {
+  width: 100%;
   margin: -100px 0 0 0;
   padding: 25px 0;
 }
@@ -54,13 +62,17 @@
   margin: 0 50px;
   float: none;
   display: inline-block;
+  animation: fadein 2000ms ease-in 5000ms;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
 #my-navbar .navbar-default .navbar-nav li a {
   font-size: 28px;
   color: white;
-  animation: fadein 2000ms ease-in 5000ms;
-  animation-fill-mode: forwards;
-  visibility: hidden;
+  cursor: pointer;
+}
+#my-navbar .navbar-default .navbar-nav li a:hover {
+  background: #8860d0;
 }
 @keyframes fadein {
   from {
@@ -79,4 +91,48 @@
     width: 80%;
     visibility: visible;
   }
+}
+@media (max-width: 576px) {
+  
+}
+@media (max-width: 768px) {
+  #my-navbar {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+  }
+  #my-navbar .navbar-header {
+    background: #5680e9;
+    border-bottom: 2px solid #8860d0;
+  }
+  #my-navbar .navbar-header .navbar-toggle {
+    padding: 10px;
+    margin: 10px;
+    border-color: transparent;
+  }
+  #my-navbar .navbar-header .navbar-toggle:hover {
+    background: transparent;
+  }
+  #my-navbar .navbar-header .navbar-toggle .icon-bar {
+    background: white;
+  }
+  #my-navbar .navbar-collapse {
+    border-color: transparent;
+    background: #5680e9;
+  }
+  #my-navbar .navbar-collapse .navbar-nav li {
+    display: block;
+    animation: none;
+    visibility: visible;
+    margin: 0;
+    padding: 0 5px;
+    text-align: left;
+  }
+  #my-navbar .navbar-collapse .navbar-nav li a:hover {
+    background: transparent;
+  }
+}
+@media (max-width: 992px) {
+  
 }

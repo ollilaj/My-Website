@@ -13,6 +13,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     particlesJS.load('particles-js', 'assets/particles.json', null);
+
+    // Only way I could correctly set height of canvas
+    let canvas = document.getElementById("particles-js");
+    canvas.setAttribute("style", "width:" + window.innerWidth + "px");
+    canvas.setAttribute("style", "height:" + window.innerHeight + "px");
   }
 
 }

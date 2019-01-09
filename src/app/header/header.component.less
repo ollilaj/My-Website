@@ -3,16 +3,15 @@
 #particles-js {
   background: @primary-color;
   position: relative;
-  height: 750px;
-  width: 100%;
   border-bottom: @secondary-color-2 2px solid;
 }
+
 #header {
   text-align: center;
   width: 350px;
   height: 140px;
   position: absolute;
-  top: ~"calc(50% - 200px)";
+  top: ~"calc(50% - 125px)";
   left: ~"calc(50% - 175px)";
 
   #name {
@@ -43,6 +42,7 @@
   }
 }
 #my-navbar {
+  width: 100%;
   margin: -100px 0 0 0;
   padding: 25px 0;
 
@@ -59,14 +59,19 @@
         margin: 0 50px;
         float: none;
         display: inline-block;
+        animation: fadein 2000ms ease-in 5000ms;
+        animation-fill-mode: forwards;
+        visibility: hidden;
 
         a {
           font-size: 28px;
           color: white;
-          animation: fadein 2000ms ease-in 5000ms;
-          animation-fill-mode: forwards;
-          visibility: hidden;
+          cursor: pointer;
+          &:hover {
+            background: @secondary-color-2;
+          }
         }
+
       }
     }
   }
@@ -82,6 +87,63 @@
   from { width: 0; }
   to   { width: 80%;
          visibility: visible; }
+}
+
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 768px) {
+  #my-navbar {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+
+    .navbar-header {
+      background: @secondary-color;
+      border-bottom: 2px solid @secondary-color-2;
+
+      .navbar-toggle {
+        padding: 10px;
+        margin: 10px;
+        border-color: transparent;
+        &:hover {
+          background: transparent;
+        }
+        .icon-bar {
+          background: white;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      border-color: transparent;
+      background: @secondary-color;
+
+      .navbar-nav {
+        li {
+          display: block;
+          animation: none;
+          visibility: visible;
+          margin: 0;
+          padding: 0 5px;
+          text-align: left;
+
+          a {
+            &:hover {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
 }
 
 
