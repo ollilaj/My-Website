@@ -3,7 +3,6 @@
 #particles-js {
   background: @primary-color;
   position: relative;
-  border-bottom: @secondary-color-2 2px solid;
 }
 
 #header {
@@ -67,6 +66,7 @@
           font-size: 28px;
           color: white;
           cursor: pointer;
+          border-radius: 5px;
           &:hover {
             background: @secondary-color-2;
           }
@@ -98,11 +98,9 @@
   #my-navbar {
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 0;
 
     .navbar-header {
-      background: @secondary-color;
+      background: @primary-darker;
       border-bottom: 2px solid @secondary-color-2;
 
       .navbar-toggle {
@@ -120,7 +118,7 @@
 
     .navbar-collapse {
       border-color: transparent;
-      background: @secondary-color;
+      background: @primary-darker;
 
       .navbar-nav {
         li {
@@ -128,7 +126,7 @@
           animation: none;
           visibility: visible;
           margin: 0;
-          padding: 0 5px;
+          padding: 5px 5px;
           text-align: left;
 
           a {

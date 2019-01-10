@@ -1,3 +1,12 @@
-<p>
-  about works!
-</p>
+<div id="about-container">
+  <div id="about-title">About</div>
+  <div id="about-item-container" class="row">
+    <div class="about-item col-lg-4 col-md-4 col-sm-12" *ngFor="let aboutItem of aboutItems">
+      <div class="icon-cont">
+        <img src="{{aboutItem.img}}" />
+      </div>
+      <div class="about-item-title">{{aboutItem.title}}</div>
+      <div class="about-item-description">{{aboutItem.description}}</div>
+    </div>
+  </div>
+</div>
