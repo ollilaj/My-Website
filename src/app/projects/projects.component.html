@@ -1,3 +1,21 @@
-<p>
-  projects works!
-</p>
+<div id="project-container">
+  <div id="project-title">Projects</div>
+  <div id="project-item-container" *ngFor="let project of projects">
+    <div class="project-item row">
+      <div class="left col-lg-6">
+        <div class="project-name ">{{project.name}}</div>
+        <div class="project-description">{{project.description}}</div>
+        <div class="project-see-more">
+          <a href="{{project.link}}">
+            View Project
+          </a>
+        </div>
+      </div>
+      <div class="right col-lg-6">
+        <div class="project-image">
+          <img src="{{project.image}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
