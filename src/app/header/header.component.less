@@ -1,7 +1,7 @@
 @import "../app.component";
 
 #particles-js {
-  background-image: linear-gradient(to top, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #85c6ed, #74bfee, #60b9ee, #53a7ef, #5b93ec, #6f7be2, #8860d0);
+  background: white;
   position: relative;
 }
 
@@ -14,14 +14,13 @@
   left: ~"calc(50% - 175px)";
 
   #name {
-    color: white;
     font-size: 48px;
     animation: fadein 5s ease-in 0s;
     padding-bottom: 10px;
   }
 
   #divider {
-    background: @secondary-color;
+    background: black;
     height: 1px;
     display: block;
     margin: auto;
@@ -32,7 +31,6 @@
   }
 
   #occupation {
-    color: white;
     font-size: 32px;
     margin-top: 10px;
     animation: fadein 3500ms ease-in 2000ms;
@@ -64,11 +62,10 @@
 
         a {
           font-size: 28px;
-          color: white;
           cursor: pointer;
           border-radius: 5px;
           &:hover {
-            background: @secondary-color-2;
+            background: @primary-color;
           }
         }
 
@@ -100,8 +97,8 @@
     padding: 0;
 
     .navbar-header {
-      background: @primary-darker;
-      border-bottom: 2px solid @secondary-color-2;
+      background: @primary-color;
+      border-bottom: 2px solid @secondary-color;
 
       .navbar-toggle {
         padding: 10px;
@@ -118,7 +115,7 @@
 
     .navbar-collapse {
       border-color: transparent;
-      background: @primary-darker;
+      background: @primary-color;
 
       .navbar-nav {
         li {

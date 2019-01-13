@@ -8,7 +8,7 @@ app-root {
   width: 100%;
 }
 #particles-js {
-  background-image: linear-gradient(to top, #c1c8e4, #b8c9e8, #aec9ea, #a3cbec, #96cced, #85c6ed, #74bfee, #60b9ee, #53a7ef, #5b93ec, #6f7be2, #8860d0);
+  background: white;
   position: relative;
 }
 #header {
@@ -20,13 +20,12 @@ app-root {
   left: calc(50% - 175px);
 }
 #header #name {
-  color: white;
   font-size: 48px;
   animation: fadein 5s ease-in 0s;
   padding-bottom: 10px;
 }
 #header #divider {
-  background: #5680e9;
+  background: black;
   height: 1px;
   display: block;
   margin: auto;
@@ -36,7 +35,6 @@ app-root {
   border-radius: 3px;
 }
 #header #occupation {
-  color: white;
   font-size: 32px;
   margin-top: 10px;
   animation: fadein 3500ms ease-in 2000ms;
@@ -67,12 +65,11 @@ app-root {
 }
 #my-navbar .navbar-default .navbar-nav li a {
   font-size: 28px;
-  color: white;
   cursor: pointer;
   border-radius: 5px;
 }
 #my-navbar .navbar-default .navbar-nav li a:hover {
-  background: #8860d0;
+  background: red;
 }
 @keyframes fadein {
   from {
@@ -101,8 +98,8 @@ app-root {
     padding: 0;
   }
   #my-navbar .navbar-header {
-    background: #6ec5e7;
-    border-bottom: 2px solid #8860d0;
+    background: red;
+    border-bottom: 2px solid black;
   }
   #my-navbar .navbar-header .navbar-toggle {
     padding: 10px;
@@ -117,7 +114,7 @@ app-root {
   }
   #my-navbar .navbar-collapse {
     border-color: transparent;
-    background: #6ec5e7;
+    background: red;
   }
   #my-navbar .navbar-collapse .navbar-nav li {
     display: block;
