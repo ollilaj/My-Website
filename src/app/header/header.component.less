@@ -1,144 +1,151 @@
 @import "../app.component";
 
-#particles-js {
-  background: white;
-  position: relative;
-}
+:host {
+  overflow-x: hidden;
+  background: @secondary-color;
 
-#header {
-  text-align: center;
-  width: 350px;
-  height: 140px;
-  position: absolute;
-  top: ~"calc(50% - 125px)";
-  left: ~"calc(50% - 175px)";
-
-  #name {
-    font-size: 48px;
-    animation: fadein 5s ease-in 0s;
-    padding-bottom: 10px;
+  #particles-js {
+    position: relative;
   }
 
-  #divider {
-    background: black;
-    height: 1px;
-    display: block;
-    margin: auto;
-    animation: expand 500ms ease-out 5s;
-    animation-fill-mode: forwards;
-    visibility: hidden;
-    border-radius: 3px;
-  }
+  #header {
+    text-align: center;
+    width: 380px;
+    height: 140px;
+    position: absolute;
+    top: ~"calc(50% - 80px)";
+    left: ~"calc(50% - 190px)";
 
-  #occupation {
-    font-size: 32px;
-    margin-top: 10px;
-    animation: fadein 3500ms ease-in 2000ms;
-    animation-fill-mode: forwards;
-    visibility: hidden;
-  }
-}
-#my-navbar {
-  width: 100%;
-  margin: -100px 0 0 0;
-  padding: 25px 0;
+    #name {
+      color: @third-color;
+      font-size: 48px;
+      animation: fadein 5s ease-in 0s;
+      padding-bottom: 10px;
+    }
 
-  .navbar-default {
-    background: transparent;
-    border: transparent;
-    margin: 0;
+    #divider {
+      background: @primary-color;
+      height: 1px;
+      display: block;
+      margin: auto;
+      animation: expand 500ms ease-out 5s;
+      animation-fill-mode: forwards;
+      visibility: hidden;
+      border-radius: 3px;
+    }
 
-    .navbar-nav {
-      float: none;
-      text-align: center;
-
-      li {
-        margin: 0 50px;
-        float: none;
-        display: inline-block;
-        animation: fadein 2000ms ease-in 5000ms;
-        animation-fill-mode: forwards;
-        visibility: hidden;
-
-        a {
-          font-size: 28px;
-          cursor: pointer;
-          border-radius: 5px;
-          &:hover {
-            background: @primary-color;
-          }
-        }
-
-      }
+    #occupation {
+      color: @third-color;
+      font-size: 32px;
+      margin-top: 10px;
+      animation: fadein 3500ms ease-in 2000ms;
+      animation-fill-mode: forwards;
+      visibility: hidden;
     }
   }
-}
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1;
-         visibility: visible; }
-}
-
-@keyframes expand {
-  from { width: 0; }
-  to   { width: 80%;
-         visibility: visible; }
-}
-
-
-@media (max-width: 576px) {
-
-}
-
-@media (max-width: 768px) {
   #my-navbar {
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    margin: -100px 0 0 0;
+    padding: 25px 0;
 
-    .navbar-header {
-      background: @primary-color;
-      border-bottom: 2px solid @secondary-color;
-
-      .navbar-toggle {
-        padding: 10px;
-        margin: 10px;
-        border-color: transparent;
-        &:hover {
-          background: transparent;
-        }
-        .icon-bar {
-          background: white;
-        }
-      }
-    }
-
-    .navbar-collapse {
-      border-color: transparent;
-      background: @primary-color;
+    .navbar-default {
+      background: transparent;
+      border: transparent;
+      margin: 0;
 
       .navbar-nav {
+        float: none;
+        text-align: center;
+
         li {
-          display: block;
-          animation: none;
-          visibility: visible;
-          margin: 0;
-          padding: 5px 5px;
-          text-align: left;
+          margin: 0 50px;
+          float: none;
+          display: inline-block;
+          animation: fadein 2000ms ease-in 5000ms;
+          animation-fill-mode: forwards;
+          visibility: hidden;
 
           a {
+            color: @third-color;
+            font-size: 28px;
+            cursor: pointer;
+            border-radius: 5px;
             &:hover {
-              background: transparent;
+              background: @primary-color;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1;
+      visibility: visible; }
+  }
+
+  @keyframes expand {
+    from { width: 0; }
+    to   { width: 80%;
+      visibility: visible; }
+  }
+
+
+  @media (max-width: 576px) {
+
+  }
+
+  @media (max-width: 768px) {
+    #my-navbar {
+      margin: 0;
+      padding: 0;
+
+      .navbar-header {
+        background: @primary-color;
+        border-bottom: 2px solid @secondary-color;
+
+        .navbar-toggle {
+          padding: 10px;
+          margin: 10px;
+          border-color: transparent;
+          &:hover {
+            background: transparent;
+          }
+          .icon-bar {
+            background: white;
+          }
+        }
+      }
+
+      .navbar-collapse {
+        border-color: transparent;
+        background: @primary-color;
+
+        .navbar-nav {
+          li {
+            display: block;
+            animation: none;
+            visibility: visible;
+            margin: 0;
+            padding: 5px 5px;
+            text-align: left;
+
+            a {
+              &:hover {
+                background: transparent;
+              }
             }
           }
         }
       }
     }
   }
+
+  @media (max-width: 992px) {
+
+  }
+
 }
-
-@media (max-width: 992px) {
-
-}
-
 

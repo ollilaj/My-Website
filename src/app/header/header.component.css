@@ -7,25 +7,29 @@ app-root {
   height: 100%;
   width: 100%;
 }
-#particles-js {
-  background: white;
+:host {
+  overflow-x: hidden;
+  background: #1b1b1b;
+}
+:host #particles-js {
   position: relative;
 }
-#header {
+:host #header {
   text-align: center;
-  width: 350px;
+  width: 380px;
   height: 140px;
   position: absolute;
-  top: calc(50% - 125px);
-  left: calc(50% - 175px);
+  top: calc(50% - 80px);
+  left: calc(50% - 190px);
 }
-#header #name {
+:host #header #name {
+  color: white;
   font-size: 48px;
   animation: fadein 5s ease-in 0s;
   padding-bottom: 10px;
 }
-#header #divider {
-  background: black;
+:host #header #divider {
+  background: red;
   height: 1px;
   display: block;
   margin: auto;
@@ -34,28 +38,29 @@ app-root {
   visibility: hidden;
   border-radius: 3px;
 }
-#header #occupation {
+:host #header #occupation {
+  color: white;
   font-size: 32px;
   margin-top: 10px;
   animation: fadein 3500ms ease-in 2000ms;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
-#my-navbar {
+:host #my-navbar {
   width: 100%;
   margin: -100px 0 0 0;
   padding: 25px 0;
 }
-#my-navbar .navbar-default {
+:host #my-navbar .navbar-default {
   background: transparent;
   border: transparent;
   margin: 0;
 }
-#my-navbar .navbar-default .navbar-nav {
+:host #my-navbar .navbar-default .navbar-nav {
   float: none;
   text-align: center;
 }
-#my-navbar .navbar-default .navbar-nav li {
+:host #my-navbar .navbar-default .navbar-nav li {
   margin: 0 50px;
   float: none;
   display: inline-block;
@@ -63,12 +68,13 @@ app-root {
   animation-fill-mode: forwards;
   visibility: hidden;
 }
-#my-navbar .navbar-default .navbar-nav li a {
+:host #my-navbar .navbar-default .navbar-nav li a {
+  color: white;
   font-size: 28px;
   cursor: pointer;
   border-radius: 5px;
 }
-#my-navbar .navbar-default .navbar-nav li a:hover {
+:host #my-navbar .navbar-default .navbar-nav li a:hover {
   background: red;
 }
 @keyframes fadein {
@@ -93,30 +99,30 @@ app-root {
   
 }
 @media (max-width: 768px) {
-  #my-navbar {
+  :host #my-navbar {
     margin: 0;
     padding: 0;
   }
-  #my-navbar .navbar-header {
+  :host #my-navbar .navbar-header {
     background: red;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #1b1b1b;
   }
-  #my-navbar .navbar-header .navbar-toggle {
+  :host #my-navbar .navbar-header .navbar-toggle {
     padding: 10px;
     margin: 10px;
     border-color: transparent;
   }
-  #my-navbar .navbar-header .navbar-toggle:hover {
+  :host #my-navbar .navbar-header .navbar-toggle:hover {
     background: transparent;
   }
-  #my-navbar .navbar-header .navbar-toggle .icon-bar {
+  :host #my-navbar .navbar-header .navbar-toggle .icon-bar {
     background: white;
   }
-  #my-navbar .navbar-collapse {
+  :host #my-navbar .navbar-collapse {
     border-color: transparent;
     background: red;
   }
-  #my-navbar .navbar-collapse .navbar-nav li {
+  :host #my-navbar .navbar-collapse .navbar-nav li {
     display: block;
     animation: none;
     visibility: visible;
@@ -124,7 +130,7 @@ app-root {
     padding: 5px 5px;
     text-align: left;
   }
-  #my-navbar .navbar-collapse .navbar-nav li a:hover {
+  :host #my-navbar .navbar-collapse .navbar-nav li a:hover {
     background: transparent;
   }
 }

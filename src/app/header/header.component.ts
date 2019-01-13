@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, ElementRef} from '@angular/core';
 import Barz from '../barz/barz';
 
 declare let particlesJS: any;
@@ -8,25 +8,30 @@ declare let particlesJS: any;
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
-  private canvas;
+  @ViewChild('myCanvas')
+  canvas: ElementRef;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit(): void {
     //particlesJS.load('particles-js', 'assets/particles.json', null);
-    this.canvas = document.getElementById("my-canvas");
-
-    // Only way I could correctly set height of canvas
-    this.canvas.setAttribute("style", "width:" + window.innerWidth + "px");
-    this.canvas.setAttribute("style", "height:" + window.innerHeight + "px");
-
     this.createBarz();
   }
 
   createBarz() : void {
-    let ctx = this.canvas.getContext("2d");
+    let ctx = (<HTMLCanvasElement>this.canvas.nativeElement).getContext('2d');
+
+    // Used to size canvas and display correctly
+    this.canvas.nativeElement.width = window.innerWidth * 2;
+    this.canvas.nativeElement.height = window.innerHeight * 2;
+    this.canvas.nativeElement.setAttribute("style", "width:" + window.innerWidth+ "px");
+    this.canvas.nativeElement.setAttribute("style", "height:" + window.innerHeight + "px");
+    ctx.scale(2,2);
+
     let myBarz = new Barz(ctx);
     myBarz.draw();
   }

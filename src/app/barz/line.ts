@@ -24,6 +24,7 @@ export default class Line {
     this.ctx.beginPath();
     this.ctx.moveTo(this.startX, this.startY);
     this.ctx.lineTo(this.endX, this.endY);
+    this.ctx.lineWidth = 2;
     this.ctx.strokeStyle = this.color;
     this.ctx.stroke();
   };
