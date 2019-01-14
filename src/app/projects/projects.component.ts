@@ -15,7 +15,7 @@ export class ProjectsComponent implements OnInit {
     this.projects = [
       {
         "name": "Jumla",
-        "image": "assets/jumla.png",
+        "image": "assets/jumla-logo.png",
         "description": "Jumla is a personal project that I developed. It aggregates data from " +
           "multiple social media outlets including Twitter and Instagram as well as from news " +
           "sources and centralizes the data into a single feed.",

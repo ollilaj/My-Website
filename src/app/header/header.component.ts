@@ -13,12 +13,17 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('myCanvas')
   canvas: ElementRef;
 
+  @ViewChild('particleJs')
+  particleJs: ElementRef;
+
   constructor() { }
 
   ngOnInit() {}
 
   ngAfterViewInit(): void {
-    //particlesJS.load('particles-js', 'assets/particles.json', null);
+    particlesJS.load('particles-js', 'assets/particles.json', null);
+    this.particleJs.nativeElement.setAttribute("style", "width:" + window.innerWidth+ "px");
+    this.particleJs.nativeElement.setAttribute("style", "height:" + window.innerHeight + "px");
     this.createBarz();
   }
 

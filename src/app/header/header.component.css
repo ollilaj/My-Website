@@ -10,9 +10,13 @@ app-root {
 :host {
   overflow-x: hidden;
   background: #1b1b1b;
+  border-bottom: red solid 3px;
 }
 :host #particles-js {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 :host #header {
   text-align: center;

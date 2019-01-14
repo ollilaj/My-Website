@@ -1,47 +1,104 @@
-#project-container {
-  padding: 100px 225px;
+:host {
+  padding: 25px 0 100px 0;
 }
-#project-container #project-title {
+:host #project-container {
+  padding: 0 200px;
+}
+:host #project-container #project-title {
   display: block;
   font-size: 38px;
   text-align: center;
   margin: 50px 0;
   font-weight: bold;
 }
-#project-container #project-item-container {
+:host #project-container #project-item-container {
   padding: 75px 0;
 }
-#project-container #project-item-container .project-item.row {
+:host #project-container #project-item-container .project-item.row {
   margin-left: 0;
   margin-right: 0;
 }
-#project-container #project-item-container .project-item.row .left {
+:host #project-container #project-item-container .project-item.row .left {
   margin: 0;
   padding: 0 50px;
 }
-#project-container #project-item-container .project-item.row .left .project-name {
+:host #project-container #project-item-container .project-item.row .left .project-name {
   font-size: 28px;
   margin-bottom: 25px;
+  padding: 0 40px;
 }
-#project-container #project-item-container .project-item.row .left .project-description {
-  margin-bottom: 25px;
+:host #project-container #project-item-container .project-item.row .left .project-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin: auto auto 25px auto;
   line-height: 34px;
+  display: block;
+  padding: 0 40px;
 }
-#project-container #project-item-container .project-item.row .left .project-see-more {
+:host #project-container #project-item-container .project-item.row .left .project-see-more {
   padding: 10px 25px;
   background: black;
   border-radius: 5px;
   cursor: pointer;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: 145px;
+  margin-left: 40px;
 }
-#project-container #project-item-container .project-item.row .left .project-see-more a {
+:host #project-container #project-item-container .project-item.row .left .project-see-more a {
   text-decoration: none;
   color: white;
 }
-#project-container #project-item-container .project-item.row .right {
+:host #project-container #project-item-container .project-item.row .right {
   margin: 0;
   padding: 0 50px;
 }
-#project-container #project-item-container .project-item.row .right .project-image img {
-  width: 100%;
+:host #project-container #project-item-container .project-item.row .right .project-image img {
+  width: 25%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+@media (max-width: 1375px) {
+  :host #project-container {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1200px) {
+  :host #project-container {
+    padding: 0 50px;
+  }
+  :host #project-container #project-title {
+    margin: 50px 0 30px 0;
+  }
+  :host #project-container #project-item-container {
+    padding: 40px 0;
+  }
+  :host #project-container #project-item-container .project-see-more {
+    margin: auto auto 50px auto;
+  }
+}
+@media (max-width: 992px) {
+  :host #project-container {
+    padding: 0 25px;
+  }
+  :host #project-container #project-item-container .project-item.row .left {
+    padding: 0;
+  }
+  :host #project-container #project-item-container .project-item.row .left .project-name {
+    text-align: center;
+  }
+  :host #project-container #project-item-container .project-item.row .left .project-description {
+    max-width: 450px;
+    text-align: center;
+  }
+  :host #project-container #project-item-container .project-item.row .left .project-see-more {
+    margin: auto auto 25px auto;
+  }
+  :host #project-container #project-item-container .project-item.row .right {
+    padding: 0;
+  }
+  :host #project-container #project-item-container .project-item.row .right .project-image img {
+    width: 50%;
+  }
 }
