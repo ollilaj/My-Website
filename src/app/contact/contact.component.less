@@ -1,5 +1,8 @@
+@import "../app.component";
+
 :host {
   padding: 25px 0 100px 0;
+  background: @secondary-color;
 
   #contact-container {
     padding: 0 200px;
@@ -10,11 +13,13 @@
       font-size: 38px;
       margin: 50px 0 0 0;
       font-weight: bold;
+      color: white;
     }
     #contact-intro {
       display: block;
       text-align: center;
       font-size: 20px;
+      color: white;
     }
     #contact-form {
       float: none;
@@ -26,6 +31,8 @@
         padding: 5px;
         margin-bottom: 2px;
         font-size: 20px;
+        background: black;
+        color: white;
       }
       #contact-email {
         display: block;
@@ -33,6 +40,8 @@
         padding: 5px;
         margin-bottom: 2px;
         font-size: 20px;
+        background: black;
+        color: white;
       }
       #contact-message {
         display: block;
@@ -40,13 +49,15 @@
         padding: 5px;
         margin-bottom: 10px;
         font-size: 20px;
+        background: black;
+        color: white;
       }
       #contact-submit {
         display: inline-block;
         font-size: 20px;
         padding: 10px 25px;
         border-radius: 5px;
-        background: black;
+        background: red;
         color: white;
       }
     }
