@@ -22,9 +22,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     particlesJS.load('particles-js', 'assets/particles.json', null);
-    this.particleJs.nativeElement.setAttribute("style", "width:" + window.innerWidth+ "px");
+    this.particleJs.nativeElement.setAttribute("style", "width:" + window.innerWidth + "px");
     this.particleJs.nativeElement.setAttribute("style", "height:" + window.innerHeight + "px");
-    this.createBarz();
+    //this.createBarz();
   }
 
   createBarz() : void {
@@ -39,5 +39,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
     let myBarz = new Barz(ctx);
     myBarz.draw();
+  }
+
+  onResize(event) : void {
+    particlesJS.load('particles-js', 'assets/particles.json', null);
+    this.particleJs.nativeElement.setAttribute("style", "width:" + event.target.innerWidth + "px");
+    this.particleJs.nativeElement.setAttribute("style", "height:" + event.target.innerHeight + "px");
   }
 }

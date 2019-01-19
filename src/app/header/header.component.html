@@ -1,9 +1,9 @@
-<canvas #myCanvas id="myCanvas"></canvas>
-<div #particleJs id="particles-js"></div>
+<!--<canvas #myCanvas id="myCanvas"></canvas>-->
+<div #particleJs id="particles-js" (window:resize)="onResize($event)"></div>
 <div id="header">
-  <div id="name">I'm Jake Ollila.</div>
+  <div id="name" class="bold">I'm Jake Ollila.</div>
   <div id="divider"></div>
-  <div id="occupation">A Web Developer.</div>
+  <div id="occupation" class="bold">A Web Developer.</div>
 </div>
 <div id="my-navbar">
   <div class="navbar navbar-default" role="navigation">
@@ -16,10 +16,10 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav nav">
-        <li><a>Home</a></li>
-        <li><a>Projects</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
+        <li><a class="bold">Home</a></li>
+        <li><a class="bold">Projects</a></li>
+        <li><a class="bold">About</a></li>
+        <li><a class="bold">Contact</a></li>
       </ul>
     </div>
   </div>

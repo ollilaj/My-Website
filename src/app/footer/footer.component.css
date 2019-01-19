@@ -4,6 +4,29 @@
 :host #footer-container {
   padding: 0 200px;
 }
+:host #footer-container #footer-item-container {
+  text-align: center;
+}
+:host #footer-container #footer-item-container .footer-item {
+  display: inline-block;
+  margin: 0 25px;
+  background: black;
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+}
+:host #footer-container #footer-item-container .footer-item a {
+  color: red;
+  position: relative;
+  top: 22px;
+  left: 0;
+}
+:host #footer-container #footer-item-container .footer-item a:hover {
+  color: white;
+}
+:host #footer-container #footer-item-container .footer-item a mat-icon {
+  transform: scale(1.5);
+}
 @media (max-width: 1375px) {
   :host #footer-container {
     padding: 0 25px;

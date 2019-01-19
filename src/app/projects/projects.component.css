@@ -8,7 +8,7 @@
   display: block;
   font-size: 38px;
   text-align: center;
-  margin: 50px 0;
+  margin: 50px 0 0 0;
   font-weight: bold;
 }
 :host #project-container #project-item-container {
@@ -28,7 +28,6 @@
   padding: 0 40px;
 }
 :host #project-container #project-item-container .project-item.row .left .project-description {
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   margin: auto auto 25px auto;
   line-height: 34px;
@@ -69,10 +68,10 @@
     padding: 0 50px;
   }
   :host #project-container #project-title {
-    margin: 50px 0 30px 0;
+    margin: 50px 0 0 0;
   }
   :host #project-container #project-item-container {
-    padding: 40px 0;
+    padding: 0 0 40px 0;
   }
   :host #project-container #project-item-container .project-see-more {
     margin: auto auto 50px auto;

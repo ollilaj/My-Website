@@ -6,5 +6,18 @@ body, html {
 @font-face { font-family: SoFarGone; src: url('assets/AubreyGraham.ttf'); }
 
 * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bold {
   font-family: 'SoFarGone', sans-serif;
+}
+
+.underline {
+  width: 75px;
+  height: 5px;
+  background: red;
+  display: block;
+  margin: auto auto 75px auto;
+  border-radius: 2px;
 }

@@ -14,8 +14,16 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
     this.footerItems = [
       {
-        "icon": "",
-        "link": ""
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/jacobollila"
+      },
+      {
+        "icon": "instagram",
+        "link": "https://www.instagram.com/jakeollila"
+      },
+      {
+        "icon": "twitter",
+        "link": "https://twitter.com/JakeOllila"
       }
     ]
   }

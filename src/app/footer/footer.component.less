@@ -5,11 +5,28 @@
     padding: 0 200px;
 
     #footer-item-container {
+      text-align: center;
 
       .footer-item {
+        display: inline-block;
+        margin: 0 25px;
+        background: black;
+        height: 70px;
+        width: 70px;
+        border-radius: 35px;
+
         a {
-          img {
-            
+          color: red;
+          position: relative;
+          top: 22px;
+          left: 0;
+
+          &:hover {
+            color: white;
+          }
+
+          mat-icon {
+            transform: scale(1.5);
           }
         }
       }

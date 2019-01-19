@@ -8,15 +8,15 @@ app-root {
   width: 100%;
 }
 :host {
-  overflow-x: hidden;
   background: #1b1b1b;
   border-bottom: red solid 3px;
-}
-:host #particles-js {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+  /*#particles-js {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }*/
+
 }
 :host #header {
   text-align: center;
@@ -139,5 +139,7 @@ app-root {
   }
 }
 @media (max-width: 992px) {
-  
+  :host #my-navbar .navbar-default .navbar-nav li {
+    margin: 0 25px;
+  }
 }
