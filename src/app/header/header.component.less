@@ -2,8 +2,8 @@
 
 :host {
   //overflow-x: hidden;
-  background: @secondary-color;
-  border-bottom: red solid 3px;
+  display: block;
+  background: black;
 
   /*#particles-js {
     position: absolute;
@@ -51,6 +51,7 @@
     width: 100%;
     margin: -100px 0 0 0;
     padding: 25px 0;
+    border-bottom: red solid 3px;
 
     .navbar-default {
       background: transparent;
@@ -105,10 +106,12 @@
     #my-navbar {
       margin: 0;
       padding: 0;
+      border-bottom: 0;
 
       .navbar-header {
-        background: @primary-color;
-        border-bottom: 2px solid @secondary-color;
+        background: #272b2e;
+        border-bottom: 3px solid red;
+
 
         .navbar-toggle {
           padding: 10px;
@@ -125,7 +128,7 @@
 
       .navbar-collapse {
         border-color: transparent;
-        background: @primary-color;
+        background: #272b2e;
 
         .navbar-nav {
           li {

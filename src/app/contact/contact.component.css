@@ -8,6 +8,7 @@ app-root {
   width: 100%;
 }
 :host {
+  display: block;
   padding: 25px 0 100px 0;
   background: #1b1b1b;
 }
@@ -36,19 +37,21 @@ app-root {
   display: block;
   width: 100%;
   padding: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   font-size: 20px;
   background: black;
   color: white;
+  border: none;
 }
 :host #contact-container #contact-form #contact-email {
   display: block;
   width: 100%;
   padding: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
   font-size: 20px;
   background: black;
   color: white;
+  border: none;
 }
 :host #contact-container #contact-form #contact-message {
   display: block;
@@ -58,14 +61,18 @@ app-root {
   font-size: 20px;
   background: black;
   color: white;
+  border: none;
 }
 :host #contact-container #contact-form #contact-submit {
   display: inline-block;
   font-size: 20px;
   padding: 10px 25px;
   border-radius: 5px;
-  background: red;
+  background: transparent;
   color: white;
+}
+:host #contact-container #contact-form #contact-submit:hover {
+  background: red;
 }
 @media (max-width: 1375px) {
   :host #contact-container {

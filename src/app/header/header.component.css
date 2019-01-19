@@ -8,8 +8,8 @@ app-root {
   width: 100%;
 }
 :host {
-  background: #1b1b1b;
-  border-bottom: red solid 3px;
+  display: block;
+  background: black;
   /*#particles-js {
     position: absolute;
     top: 0;
@@ -54,6 +54,7 @@ app-root {
   width: 100%;
   margin: -100px 0 0 0;
   padding: 25px 0;
+  border-bottom: red solid 3px;
 }
 :host #my-navbar .navbar-default {
   background: transparent;
@@ -106,10 +107,11 @@ app-root {
   :host #my-navbar {
     margin: 0;
     padding: 0;
+    border-bottom: 0;
   }
   :host #my-navbar .navbar-header {
-    background: red;
-    border-bottom: 2px solid #1b1b1b;
+    background: #272b2e;
+    border-bottom: 3px solid red;
   }
   :host #my-navbar .navbar-header .navbar-toggle {
     padding: 10px;
@@ -124,7 +126,7 @@ app-root {
   }
   :host #my-navbar .navbar-collapse {
     border-color: transparent;
-    background: red;
+    background: #272b2e;
   }
   :host #my-navbar .navbar-collapse .navbar-nav li {
     display: block;

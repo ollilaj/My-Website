@@ -1,6 +1,7 @@
 @import "../app.component";
 
 :host {
+  display: block;
   padding: 25px 0 100px 0;
   background: @secondary-color;
 
@@ -29,19 +30,21 @@
         display: block;
         width: 100%;
         padding: 5px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         font-size: 20px;
         background: black;
         color: white;
+        border: none;
       }
       #contact-email {
         display: block;
         width: 100%;
         padding: 5px;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         font-size: 20px;
         background: black;
         color: white;
+        border: none;
       }
       #contact-message {
         display: block;
@@ -51,14 +54,19 @@
         font-size: 20px;
         background: black;
         color: white;
+        border: none;
       }
       #contact-submit {
         display: inline-block;
         font-size: 20px;
         padding: 10px 25px;
         border-radius: 5px;
-        background: red;
+        background: transparent;
         color: white;
+
+        &:hover {
+          background: red;
+        }
       }
     }
   }

@@ -8,6 +8,7 @@ app-root {
   width: 100%;
 }
 :host {
+  display: block;
   padding: 100px 0;
 }
 :host #about-container {
@@ -19,6 +20,7 @@ app-root {
   text-align: center;
   margin: 50px 0 0 0;
   font-weight: bold;
+  color: black;
 }
 :host #about-container #about-item-container.row {
   margin-left: 0;

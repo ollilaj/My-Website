@@ -46,4 +46,5 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.particleJs.nativeElement.setAttribute("style", "width:" + event.target.innerWidth + "px");
     this.particleJs.nativeElement.setAttribute("style", "height:" + event.target.innerHeight + "px");
   }
+
 }
