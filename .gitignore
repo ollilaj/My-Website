@@ -33,6 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+gmail-credentials.txt
 
 # System Files
 .DS_Store
