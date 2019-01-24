@@ -15,53 +15,80 @@
     #project-item-container {
       padding: 75px 0;
 
-      .project-item.row {
-        margin-left: 0;
-        margin-right: 0;
+      .project-item {
+        padding: 0;
+        position: relative;
 
-        .left {
-          margin: 0;
-          padding: 0 50px;
+        &:hover {
+          img {
+            filter: brightness(0%);
+            transition: 1s;
+          }
+          .hidden-content {
+            opacity: 1;
+            transition: 1s;
+          }
+        }
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          transition: 0.5s;
+        }
+        .hidden-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+          opacity: 0;
+          transition: 0.5s;
+          color: white;
 
           .project-name {
-            font-size: 28px;
-            margin-bottom: 25px;
-            padding: 0 40px;
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 5px 0 0 0;
           }
           .project-description {
-            font-size: 20px;
-            margin: auto auto 25px auto;
-            line-height: 34px;
-            display: block;
-            padding: 0 40px;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
           }
           .project-see-more {
-            padding: 10px 25px;
-            background: black;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
+            width: 100%;
             text-align: center;
-            width: 145px;
-            margin-left: 40px;
 
             a {
               text-decoration: none;
               color: white;
+              display: inline-block;
+              background: red;
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 22px;
             }
           }
         }
-        .right {
-          margin: 0;
-          padding: 0 50px;
 
-          .project-image {
-            img {
-              width: 25%;
-              height: auto;
-              display: block;
-              margin: auto;
-            }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  :host {
+    #project-container {
+      padding: 0 100px;
+
+      #project-item-container {
+        .project-item {
+
+          .hidden-content {
+            width: 75%;
           }
         }
       }
@@ -73,6 +100,21 @@
   :host {
     #project-container {
       padding: 0 100px;
+
+      #project-item-container {
+        .project-item {
+
+          img {
+          }
+          .hidden-content {
+            width: 85%;
+            .project-description {
+              padding: 5px 0 10px 0;
+              font-size: 18px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -86,9 +128,7 @@
       }
       #project-item-container {
         padding: 0 0 40px 0;
-        .project-see-more {
-          margin: auto auto 50px auto;
-        }
+
       }
     }
   }
@@ -98,26 +138,26 @@
   :host {
     #project-container {
       padding: 0 25px;
+    }
+  }
+}
 
-      #project-item-container .project-item.row {
-        .left {
-          padding: 0;
-          .project-name {
-            text-align: center;
+@media (max-width: 480px) {
+  :host {
+    #project-container {
+      #project-item-container {
+        .project-item {
+          img {
           }
-          .project-description {
-            max-width: 450px;
-            text-align: center;
-          }
-          .project-see-more {
-            margin: auto auto 25px auto;
-          }
-        }
-        .right {
-          padding: 0;
-          .project-image {
-            img {
-              width: 50%;
+          .hidden-content {
+            width: 90%;
+            .project-name {
+              padding: 0;
+              font-size: 26px;
+            }
+            .project-description {
+              padding: 5px 0;
+              font-size: 14px;
             }
           }
         }

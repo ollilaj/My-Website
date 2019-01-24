@@ -2,10 +2,13 @@
   <div id="contact-title" class="bold">Contact</div>
   <div class="underline"></div>
   <div id="contact-intro">Have a question or want to work together?</div>
-  <form id="contact-form" #emailForm="ngForm" (ngSubmit)="sendEmail(emailForm)" class="col-lg-offset-4 col-lg-4 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
-    <input id="contact-name" type="text" name="name" placeholder="Name" ngModel>
-    <input id="contact-email" type="text" name="email" placeholder="Email Address" ngModel>
-    <textarea id="contact-message" type="text" name="message" placeholder="Message" rows="5" ngModel></textarea>
-    <input id="contact-submit" type="submit" value="Submit">
+  <form id="contact-form" [formGroup]="emailForm" (ngSubmit)="sendEmail(emailForm)" class="col-lg-offset-4 col-lg-4 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+    <input id="contact-name" formControlName="name" type="text" name="name" placeholder="Name">
+    <span *ngIf="(name.dirty || name.touched) && name.invalid">Email is required.</span>
+    <input id="contact-email" formControlName="email" type="text" name="email" placeholder="Email Address">
+    <span *ngIf="(email.dirty || email.touched) && email.invalid">Email is required.</span>
+    <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.invalidEmail">Value has to be a valid email address.</span>
+    <textarea id="contact-message" formControlName="message" type="text" name="message" placeholder="Message" rows="5"></textarea>
+    <input id="contact-submit" [disabled]="!emailForm.valid" type="submit" value="Submit">
   </form>
 </div>

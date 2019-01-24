@@ -5,13 +5,16 @@ const fs = require('fs');
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
-  auth: fs.readFileSync('gmail-credentials.txt')
+  auth: {
+    user: 'jakeowebsite@gmail.com',
+    pass: 'Lacrosse1!'
+  }
 });
 
 router.post('/send-email', function(req, res){
 
   let mailOptions = {
-    from: req.body.address,
+    from: req.body.email,
     to: 'jake.ollila@gmail.com',
     subject: 'Freelance Prospect: ' + req.body.name,
     text: req.body.message
