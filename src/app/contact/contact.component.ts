@@ -11,9 +11,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   public emailForm : FormGroup;
+  public emailFormErrorMessages : any;
+  public hasSubmitted : boolean;
 
   constructor(private contactService : ContactService) {
     this.emailForm = this.createFormGroup();
+    this.createFormErrorMessages();
+    this.hasSubmitted = false;
   }
 
   ngOnInit() {
@@ -23,23 +27,52 @@ export class ContactComponent implements OnInit {
   createFormGroup() : FormGroup {
     return new FormGroup({
       name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email]),
+      email: new FormControl('', [Validators.required,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]),
       message: new FormControl('', [Validators.required])
     });
   }
 
-  sendEmail() {
-    let emailContents = {
-      name: this.emailForm.controls['name'].value,
-      email: this.emailForm.controls['email'].value,
-      message: this.emailForm.controls['message'].value,
-    };
-    this.contactService.sendEmail(emailContents).subscribe(
-      (data : any) => {
-        console.log(data);
+  createFormErrorMessages() : void {
+    this.emailFormErrorMessages = {
+      'name': [
+        { type: 'required', message: '* Name is required' }
+      ],
+      'email': [
+        { type: 'required', message: '* Email is required' },
+        { type: 'pattern', message: '* Enter a valid email' }
+      ],
+      'message': [
+        { type: 'required', message: '* Message is required' }
+      ]
+    }
+  }
+
+  validateAllFormFields() : void {
+    Object.keys(this.emailForm.controls).forEach(field => {  //{2}
+      const control = this.emailForm.get(field);             //{3}
+      if (control instanceof FormControl) {             //{4}
+        control.markAsTouched({ onlySelf: true });
       }
-    );
-    this.emailForm.reset();
+    });
+  }
+
+  sendEmail() {
+    if (this.emailForm.valid) {
+      let emailContents = {
+        name: this.emailForm.controls['name'].value,
+        email: this.emailForm.controls['email'].value,
+        message: this.emailForm.controls['message'].value,
+      };
+      this.contactService.sendEmail(emailContents).subscribe(
+        (data : any) => {
+          console.log(data);
+        }
+      );
+      this.emailForm.reset();
+    } else {
+      this.validateAllFormFields(); //{7}
+    }
   }
 
   get name() {
