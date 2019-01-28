@@ -18,22 +18,35 @@ app-root {
   }*/
 
 }
+:host #header-image {
+  background: url(../../assets/city-grey.png) no-repeat left top fixed;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+}
 :host #header {
   text-align: center;
-  width: 380px;
-  height: 140px;
+  height: 600px;
+  width: 600px;
   position: absolute;
-  top: calc(50% - 80px);
-  left: calc(50% - 190px);
+  top: calc(50% - 300px);
+  left: calc(50% - 300px);
+  border-radius: 50%;
+  border: white solid 15px;
 }
-:host #header #name {
+:host #header #header-content {
+  margin-top: 215px;
+}
+:host #header #header-content #name {
   color: white;
   font-size: 48px;
   animation: fadein 5s ease-in 0s;
   padding-bottom: 10px;
 }
-:host #header #divider {
-  background: red;
+:host #header #header-content #divider {
+  background: #cf3d3e;
   height: 1px;
   display: block;
   margin: auto;
@@ -42,7 +55,7 @@ app-root {
   visibility: hidden;
   border-radius: 3px;
 }
-:host #header #occupation {
+:host #header #header-content #occupation {
   color: white;
   font-size: 32px;
   margin-top: 10px;
@@ -54,7 +67,7 @@ app-root {
   width: 100%;
   margin: -100px 0 0 0;
   padding: 25px 0;
-  border-bottom: red solid 3px;
+  border-bottom: #cf3d3e solid 3px;
 }
 :host #my-navbar .navbar-default {
   background: transparent;
@@ -75,12 +88,12 @@ app-root {
 }
 :host #my-navbar .navbar-default .navbar-nav li a {
   color: white;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
   border-radius: 5px;
 }
 :host #my-navbar .navbar-default .navbar-nav li a:hover {
-  background: red;
+  background: #cf3d3e;
 }
 @keyframes fadein {
   from {
@@ -96,12 +109,40 @@ app-root {
     width: 0;
   }
   to {
-    width: 80%;
+    width: 50%;
     visibility: visible;
   }
 }
-@media (max-width: 576px) {
-  
+@media (max-width: 1300px) {
+  :host #header {
+    height: 500px;
+    width: 500px;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+  }
+  :host #header #header-content {
+    margin-top: 170px;
+  }
+}
+@media (max-width: 992px) {
+  :host #header {
+    height: 400px;
+    width: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+  }
+  :host #header #header-content {
+    margin-top: 135px;
+  }
+  :host #header #header-content #name {
+    font-size: 32px;
+  }
+  :host #header #header-content #occupation {
+    font-size: 22px;
+  }
+  :host #my-navbar .navbar-default .navbar-nav li {
+    margin: 0 20px;
+  }
 }
 @media (max-width: 768px) {
   :host #my-navbar {
@@ -110,8 +151,8 @@ app-root {
     border-bottom: 0;
   }
   :host #my-navbar .navbar-header {
-    background: #272b2e;
-    border-bottom: 3px solid red;
+    background: dimgray;
+    border-bottom: 3px solid #cf3d3e;
   }
   :host #my-navbar .navbar-header .navbar-toggle {
     padding: 10px;
@@ -126,7 +167,7 @@ app-root {
   }
   :host #my-navbar .navbar-collapse {
     border-color: transparent;
-    background: #272b2e;
+    background: dimgray;
   }
   :host #my-navbar .navbar-collapse .navbar-nav li {
     display: block;
@@ -138,10 +179,5 @@ app-root {
   }
   :host #my-navbar .navbar-collapse .navbar-nav li a:hover {
     background: transparent;
-  }
-}
-@media (max-width: 992px) {
-  :host #my-navbar .navbar-default .navbar-nav li {
-    margin: 0 25px;
   }
 }

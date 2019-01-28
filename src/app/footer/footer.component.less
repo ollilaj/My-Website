@@ -1,7 +1,9 @@
+@import "../app.component";
+
 :host {
   display: block;
   background: black;
-  padding: 75px 0;
+  padding: 50px 0 40px 0;
 
   #footer-container {
     padding: 0 200px;
@@ -12,7 +14,7 @@
       .footer-item {
         display: inline-block;
         margin: 0 25px;
-        background: red;
+        background: @secondary-color;
         height: 70px;
         width: 70px;
         border-radius: 35px;
@@ -39,7 +41,7 @@
         color: white;
         text-transform: uppercase;
         span {
-          color: red;
+          color: @secondary-color;
         }
       }
     }

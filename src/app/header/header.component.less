@@ -12,46 +12,61 @@
     left: 0;
   }*/
 
+  #header-image {
+    background: url(../../assets/city-grey.png) no-repeat left top fixed;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
   #header {
     text-align: center;
-    width: 380px;
-    height: 140px;
+    height: 600px;
+    width: 600px;
     position: absolute;
-    top: ~"calc(50% - 80px)";
-    left: ~"calc(50% - 190px)";
+    top: ~"calc(50% - 300px)";
+    left: ~"calc(50% - 300px)";
+    border-radius: 50%;
+    border: white solid 15px;
 
-    #name {
-      color: @third-color;
-      font-size: 48px;
-      animation: fadein 5s ease-in 0s;
-      padding-bottom: 10px;
-    }
+    #header-content {
+      margin-top: 215px;
 
-    #divider {
-      background: @primary-color;
-      height: 1px;
-      display: block;
-      margin: auto;
-      animation: expand 500ms ease-out 5s;
-      animation-fill-mode: forwards;
-      visibility: hidden;
-      border-radius: 3px;
-    }
+      #name {
+        color: @primary-color;
+        font-size: 48px;
+        animation: fadein 5s ease-in 0s;
+        padding-bottom: 10px;
+      }
 
-    #occupation {
-      color: @third-color;
-      font-size: 32px;
-      margin-top: 10px;
-      animation: fadein 3500ms ease-in 2000ms;
-      animation-fill-mode: forwards;
-      visibility: hidden;
+      #divider {
+        background: @secondary-color;
+        height: 1px;
+        display: block;
+        margin: auto;
+        animation: expand 500ms ease-out 5s;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        border-radius: 3px;
+      }
+
+      #occupation {
+        color: @primary-color;
+        font-size: 32px;
+        margin-top: 10px;
+        animation: fadein 3500ms ease-in 2000ms;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+      }
     }
   }
   #my-navbar {
     width: 100%;
     margin: -100px 0 0 0;
     padding: 25px 0;
-    border-bottom: red solid 3px;
+    border-bottom: @secondary-color solid 3px;
 
     .navbar-default {
       background: transparent;
@@ -71,12 +86,12 @@
           visibility: hidden;
 
           a {
-            color: @third-color;
-            font-size: 28px;
+            color: @primary-color;
+            font-size: 30px;
             cursor: pointer;
             border-radius: 5px;
             &:hover {
-              background: @primary-color;
+              background: @secondary-color;
             }
           }
 
@@ -93,13 +108,49 @@
 
   @keyframes expand {
     from { width: 0; }
-    to   { width: 80%;
+    to   { width: 50%;
       visibility: visible; }
   }
 
+  @media (max-width: 1300px) {
+    #header {
+      height: 500px;
+      width: 500px;
+      top: ~"calc(50% - 250px)";
+      left: ~"calc(50% - 250px)";
 
-  @media (max-width: 576px) {
+      #header-content {
+        margin-top: 170px;
+      }
+    }
+  }
 
+  @media (max-width: 992px) {
+    #header {
+      height: 400px;
+      width: 400px;
+      top: ~"calc(50% - 200px)";
+      left: ~"calc(50% - 200px)";
+
+      #header-content {
+        margin-top: 135px;
+        #name {
+          font-size: 32px;
+        }
+        #occupation {
+          font-size: 22px;
+        }
+      }
+    }
+    #my-navbar {
+      .navbar-default {
+        .navbar-nav {
+          li {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
   }
 
   @media (max-width: 768px) {
@@ -109,8 +160,8 @@
       border-bottom: 0;
 
       .navbar-header {
-        background: #272b2e;
-        border-bottom: 3px solid red;
+        background: @fourth-color	;
+        border-bottom: 3px solid @secondary-color;
 
 
         .navbar-toggle {
@@ -128,7 +179,7 @@
 
       .navbar-collapse {
         border-color: transparent;
-        background: #272b2e;
+        background: @fourth-color;
 
         .navbar-nav {
           li {
@@ -149,18 +200,5 @@
       }
     }
   }
-
-  @media (max-width: 992px) {
-    #my-navbar {
-      .navbar-default {
-        .navbar-nav {
-          li {
-            margin: 0 25px;
-          }
-        }
-      }
-    }
-  }
-
 }
 

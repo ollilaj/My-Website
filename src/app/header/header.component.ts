@@ -16,14 +16,17 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('particleJs')
   particleJs: ElementRef;
 
+  @ViewChild('headerImage')
+  headerImage: ElementRef;
+
   constructor() { }
 
   ngOnInit() {}
 
   ngAfterViewInit(): void {
-    particlesJS.load('particles-js', 'assets/particles.json', null);
-    this.particleJs.nativeElement.setAttribute("style", "width:" + window.innerWidth + "px");
-    this.particleJs.nativeElement.setAttribute("style", "height:" + window.innerHeight + "px");
+    //particlesJS.load('particles-js', 'assets/particles.json', null);
+    this.headerImage.nativeElement.setAttribute("style", "width:" + window.innerWidth + "px");
+    this.headerImage.nativeElement.setAttribute("style", "height:" + window.innerHeight + "px");
     //this.createBarz();
   }
 
@@ -42,9 +45,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   onResize(event) : void {
-    particlesJS.load('particles-js', 'assets/particles.json', null);
-    this.particleJs.nativeElement.setAttribute("style", "width:" + event.target.innerWidth + "px");
-    this.particleJs.nativeElement.setAttribute("style", "height:" + event.target.innerHeight + "px");
+    //particlesJS.load('particles-js', 'assets/particles.json', null);
+    this.headerImage.nativeElement.setAttribute("style", "width:" + event.target.innerWidth + "px");
+    this.headerImage.nativeElement.setAttribute("style", "height:" + event.target.innerHeight + "px");
   }
 
 }

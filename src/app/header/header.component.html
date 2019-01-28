@@ -1,9 +1,11 @@
 <!--<canvas #myCanvas id="myCanvas"></canvas>-->
-<div #particleJs id="particles-js" (window:resize)="onResize($event)"></div>
+<div #headerImage id="header-image" (window:resize)="onResize($event)"></div>
 <div id="header">
-  <div id="name" class="bold">I'm Jake Ollila.</div>
-  <div id="divider"></div>
-  <div id="occupation" class="bold">A Web Developer.</div>
+  <div id="header-content">
+    <div id="name" class="bold">I'm Jake Ollila.</div>
+    <div id="divider"></div>
+    <div id="occupation" class="bold">A Web Developer.</div>
+  </div>
 </div>
 <div id="my-navbar">
   <div class="navbar navbar-default" role="navigation">
@@ -16,10 +18,10 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav nav">
-        <li><a [ngx-scroll-to]="'#home'" class="bold">Home</a></li>
-        <li><a [ngx-scroll-to]="'#about'" class="bold">About</a></li>
-        <li><a [ngx-scroll-to]="'#projects'" class="bold">Projects</a></li>
-        <li><a [ngx-scroll-to]="'#contact'" class="bold">Contact</a></li>
+        <li><a [ngx-scroll-to]="'#home'">Home</a></li>
+        <li><a [ngx-scroll-to]="'#about'">About</a></li>
+        <li><a [ngx-scroll-to]="'#projects'">Projects</a></li>
+        <li><a [ngx-scroll-to]="'#contact'">Contact</a></li>
       </ul>
     </div>
   </div>

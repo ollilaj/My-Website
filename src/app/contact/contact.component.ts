@@ -39,8 +39,8 @@ export class ContactComponent implements OnInit {
         { type: 'required', message: '* Name is required' }
       ],
       'email': [
-        { type: 'required', message: '* Email is required' },
-        { type: 'pattern', message: '* Enter a valid email' }
+        { type: 'required', message: '* Email address is required' },
+        { type: 'pattern', message: '* Enter a valid email address' }
       ],
       'message': [
         { type: 'required', message: '* Message is required' }

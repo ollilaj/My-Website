@@ -1,6 +1,9 @@
+@import "../app.component";
+
 :host {
   display: block;
-  padding: 25px 0 100px 0;
+  padding: 100px 0;
+  background: #F8F8F8;
 
   #project-container {
     padding: 0 200px;
@@ -13,7 +16,7 @@
       color: black;
     }
     #project-item-container {
-      padding: 75px 0;
+      padding: 50px 0 0 0;
 
       .project-item {
         padding: 0;
@@ -21,7 +24,7 @@
 
         &:hover {
           img {
-            filter: brightness(0%);
+            filter: brightness(0) invert(1);
             transition: 1s;
           }
           .hidden-content {
@@ -34,6 +37,7 @@
           height: auto;
           border-radius: 10px;
           transition: 0.5s;
+          box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         }
         .hidden-content {
           position: absolute;
@@ -43,7 +47,6 @@
           width: 60%;
           opacity: 0;
           transition: 0.5s;
-          color: white;
 
           .project-name {
             width: 100%;
@@ -64,12 +67,18 @@
 
             a {
               text-decoration: none;
-              color: white;
               display: inline-block;
-              background: red;
               padding: 10px 20px;
               border-radius: 5px;
               font-size: 22px;
+              color: black;
+              border: 2px outset buttonface;
+              border-image: initial;
+
+              &:hover {
+                color: white;
+                background: @secondary-color;
+              }
             }
           }
         }
@@ -138,6 +147,9 @@
   :host {
     #project-container {
       padding: 0 25px;
+      #project-title {
+        margin: 25px 0 0 0;
+      }
     }
   }
 }
