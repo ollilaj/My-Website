@@ -33,6 +33,7 @@ app-root {
 }
 :host #contact-container #contact-form .error-message {
   margin-bottom: 4px;
+  color: #cf3d3e;
 }
 :host #contact-container #contact-form #contact-name {
   display: block;

@@ -14,25 +14,42 @@
       font-weight: bold;
       color: black;
     }
+    .underline {
+      margin-bottom: 25px;
+    }
+    #about-intro {
+      display: block;
+      font-size: 30px;
+      padding: 15px 0 30px 0;
+      font-style: italic;
+      text-align: center;
+    }
     #about-item-container.row {
       margin-left: 0;
       margin-right: 0;
+      display: flex;
+      flex-wrap: wrap;
 
       .about-item {
         padding-left: 0;
         padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .item-formatting {
           margin: 0 25px;
+          padding: 10px;
           border-radius: 10px;
           background: @primary-color;
           box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
           overflow: auto;
+          height: 100%;
 
           .item-border {
-            margin: 10px;
             padding: 40px 0;
             border: 1px @secondary-color solid;
+            height: 100%;
 
             .about-item-icon {
               display: block;
