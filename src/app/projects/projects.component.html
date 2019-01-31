@@ -2,16 +2,19 @@
   <div id="project-title" class="bold">Projects</div>
   <div class="underline"></div>
   <div id="project-item-container" class="row" *ngFor="let project of projects">
-    <div class="project-item col-xl-4 col-xl-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-      <img src="{{project.image}}" />
-      <div class="hidden-content">
-        <div class="project-name ">{{project.name}}</div>
-        <div class="project-description">{{project.description}}</div>
+    <div class="project-item">
+      <div class="project-image-cont">
+        <img src="{{project.image}}" />
         <div class="project-see-more">
           <a href="{{project.link}}">
             View Project
           </a>
         </div>
+        <div class="overlay"></div>
+      </div>
+      <div class="project-info">
+        <div class="project-name">{{project.name}}</div>
+        <div class="project-description">{{project.description}}</div>
       </div>
     </div>
   </div>

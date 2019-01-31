@@ -3,7 +3,6 @@
 :host {
   display: block;
   padding: 100px 0;
-  background: #F8F8F8;
 
   #project-container {
     padding: 0 200px;
@@ -22,48 +21,44 @@
         padding: 0;
         position: relative;
 
-        &:hover {
-          img {
-            filter: brightness(0) invert(1);
-            transition: 1s;
-          }
-          .hidden-content {
-            opacity: 1;
-            transition: 1s;
-          }
-        }
-        img {
+        .project-image-cont {
+          display: block;
+          margin: auto;
           width: 100%;
-          height: auto;
+          max-width: 950px;
+          background: #E8E8E8;
           border-radius: 10px;
-          transition: 0.5s;
-          box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        }
-        .hidden-content {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 60%;
-          opacity: 0;
-          transition: 0.5s;
 
-          .project-name {
-            width: 100%;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            padding: 5px 0 0 0;
+          &:hover {
+            .project-see-more {
+              opacity: 1;
+              transition: 1s;
+            }
+            .overlay {
+              opacity: .65;
+              transition: 1s;
+            }
           }
-          .project-description {
-            width: 100%;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 18px;
+
+          img {
+            width: 250px;
+            display: block;
+            margin: auto;
+            padding: 50px 0;
+            border-radius: 10px;
+            position: relative;
           }
           .project-see-more {
+            display: block;
+            margin: auto;
             width: 100%;
+            max-width: 950px;
             text-align: center;
+            position: absolute;
+            top: 145px;
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 2;
 
             a {
               text-decoration: none;
@@ -71,8 +66,9 @@
               padding: 10px 20px;
               border-radius: 5px;
               font-size: 22px;
-              color: black;
-              border: 2px outset buttonface;
+              color: white;
+              background: transparent;
+              border: 2px outset @secondary-color;
               border-image: initial;
 
               &:hover {
@@ -81,8 +77,36 @@
               }
             }
           }
+          .overlay {
+            position: absolute;
+            height: 350px;
+            width: 100%;
+            max-width: 950px;
+            background: black;
+            top: 0;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.5s;
+          }
         }
+        .project-info {
+          display: block;
+          margin: auto;
+          width: 100%;
+          max-width: 950px;
 
+          .project-name {
+            width: 100%;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 5px 0 0 0;
+          }
+          .project-description {
+            width: 100%;
+            padding: 15px 0;
+            font-size: 18px;
+          }
+        }
       }
     }
   }

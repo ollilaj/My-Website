@@ -17,75 +17,7 @@
     .underline {
       margin-bottom: 25px;
     }
-    #about-intro {
-      display: block;
-      font-size: 30px;
-      padding: 15px 0 30px 0;
-      font-style: italic;
-      text-align: center;
-    }
-    #about-item-container.row {
-      margin-left: 0;
-      margin-right: 0;
-      display: flex;
-      flex-wrap: wrap;
 
-      .about-item {
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .item-formatting {
-          margin: 0 25px;
-          padding: 10px;
-          border-radius: 10px;
-          background: @primary-color;
-          box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-          overflow: auto;
-          height: 100%;
-
-          .item-border {
-            padding: 40px 0;
-            border: 1px @secondary-color solid;
-            height: 100%;
-
-            .about-item-icon {
-              display: block;
-
-              .icon-cont {
-                display: block;
-                margin: auto;
-                height: 150px;
-                width: 150px;
-                border-radius: 75px;
-                background: @third-color;
-
-                img {
-                  height: 100px;
-                  width: 100px;
-                  margin: 25px 0 0 25px;
-                }
-              }
-            }
-            .about-item-title {
-              text-align: center;
-              font-size: 28px;
-              margin: 25px 0;
-              font-weight: bold;
-            }
-            .about-item-description {
-              font-size: 20px;
-              text-align: center;
-              max-width: 400px;
-              display: block;
-              margin: auto;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -100,14 +32,7 @@
 @media (max-width: 1375px) {
   :host {
     #about-container {
-      padding: 0 25px;
-      #about-item-container.row {
-        .about-item {
-          .item-formatting {
-            margin: 0 10px;
-          }
-        }
-      }
+
     }
   }
 }
@@ -115,7 +40,7 @@
 @media (max-width: 1200px) {
   :host {
     #about-container {
-      padding: 0 50px;
+
     }
   }
 }
@@ -127,11 +52,7 @@
       #about-title {
         margin: 25px 0 0 0;
       }
-      #about-item-container.row {
-        .about-item {
-          margin: 0 0 60px 0;
-        }
-      }
+
     }
   }
 }
@@ -139,7 +60,7 @@
 @media (max-width: 768px) {
   :host {
     #about-container {
-      padding: 0 25px;
+
     }
   }
 }

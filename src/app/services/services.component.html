@@ -1,0 +1,20 @@
+<div id="services-container">
+  <div id="services-title" class="bold">Services</div>
+  <div class="underline"></div>
+  <div id="services-intro">What I offer</div>
+  <div id="services-item-container" class="row">
+    <div class="service-item col-lg-4 col-md-4 col-sm-12" *ngFor="let serviceItem of serviceItems">
+      <div class="item-formatting">
+        <div class="item-border">
+          <div class="service-item-icon">
+            <div class="icon-cont">
+              <img src="{{serviceItem.img}}" />
+            </div>
+          </div>
+          <div class="service-item-title">{{serviceItem.title}}</div>
+          <div class="service-item-description">{{serviceItem.description}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

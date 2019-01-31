@@ -8,18 +8,20 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProjectsComponent,
-    AboutComponent,
+    ServicesComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

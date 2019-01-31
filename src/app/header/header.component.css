@@ -46,7 +46,7 @@ app-root {
   padding-bottom: 10px;
 }
 :host #header #header-content #divider {
-  background: #cf3d3e;
+  background: white;
   height: 1px;
   display: block;
   margin: auto;

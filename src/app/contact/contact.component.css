@@ -10,7 +10,6 @@ app-root {
 :host {
   display: block;
   padding: 100px 0;
-  background: #f0f0f0;
 }
 :host #contact-container {
   padding: 0 200px;
