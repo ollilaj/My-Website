@@ -22,9 +22,6 @@ app-root {
   font-weight: bold;
   color: black;
 }
-:host #project-container #project-item-container {
-  padding: 50px 0 0 0;
-}
 :host #project-container #project-item-container .project-item {
   padding: 0;
   position: relative;
@@ -97,15 +94,22 @@ app-root {
   width: 100%;
   max-width: 950px;
 }
+:host #project-container #project-item-container .project-item .project-info .project-tags {
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  padding: 15px 0;
+  text-transform: uppercase;
+  color: #cf3d3e;
+}
 :host #project-container #project-item-container .project-item .project-info .project-name {
   width: 100%;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
-  padding: 5px 0 0 0;
+  padding: 15px 0 0 0;
 }
 :host #project-container #project-item-container .project-item .project-info .project-description {
   width: 100%;
-  padding: 15px 0;
   font-size: 18px;
 }
 @media (max-width: 1600px) {

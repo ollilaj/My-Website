@@ -36,49 +36,29 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 475px;
 
         .item-formatting {
+          background-size: cover;
           margin: 0 25px;
           padding: 10px 10px 10px 0;
           border-radius: 10px;
-          background: @primary-color;
           box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
           overflow: auto;
           height: 100%;
 
           .item-border {
-            padding: 40px 0;
-            border-left: 7px @secondary-color solid;
+            padding: 40px 15px;
             height: 100%;
+            color: white;
 
-            .service-item-icon {
-              display: block;
-
-              .icon-cont {
-                display: block;
-                margin: auto;
-                height: 150px;
-                width: 150px;
-                border-radius: 75px;
-                background: @third-color;
-
-                img {
-                  height: 100px;
-                  width: 100px;
-                  margin: 25px 0 0 25px;
-                }
-              }
-            }
             .service-item-title {
-              text-align: center;
               font-size: 28px;
               margin: 25px 0;
               font-weight: bold;
             }
             .service-item-description {
-              font-size: 20px;
-              text-align: center;
-              max-width: 400px;
+              font-size: 18px;
               display: block;
               margin: auto;
             }

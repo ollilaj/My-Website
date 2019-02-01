@@ -40,6 +40,7 @@ app-root {
   padding: 5px;
   margin-bottom: 5px;
   font-size: 20px;
+  background: whitesmoke;
   border: none;
 }
 :host #contact-container #contact-form #contact-email {
@@ -48,6 +49,7 @@ app-root {
   padding: 5px;
   margin-bottom: 5px;
   font-size: 20px;
+  background: whitesmoke;
   border: none;
 }
 :host #contact-container #contact-form #contact-message {
@@ -56,6 +58,7 @@ app-root {
   padding: 5px;
   margin-bottom: 5px;
   font-size: 20px;
+  background: whitesmoke;
   border: none;
 }
 :host #contact-container #contact-form #submit-container {

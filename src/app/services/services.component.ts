@@ -14,7 +14,7 @@ export class ServicesComponent implements OnInit {
   ngOnInit() {
     this.serviceItems = [
       {
-        "img": "assets/design.png",
+        "img": "assets/design.jpg",
         "title": "Design",
         "description": "The website design process starts with sketched page layouts and wire-frames. " +
         "Pending your feedback, digital blueprints are then created, incorporating your company's " +
@@ -31,7 +31,7 @@ export class ServicesComponent implements OnInit {
         "img": "assets/cloud.png",
         "title": "Support",
         "description": "After the development process, I can provide hosting for your website, including " +
-        "feature requests and SEO. "
+        "any changes that you would like to make upon filing a feature request. "
       }
     ]
   }
