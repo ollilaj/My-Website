@@ -12,7 +12,7 @@ app-root {
   padding: 100px 0;
 }
 :host #project-container {
-  padding: 0 200px;
+  padding: 0 15px;
 }
 :host #project-container #project-title {
   display: block;
@@ -30,7 +30,7 @@ app-root {
   display: block;
   margin: auto;
   width: 100%;
-  max-width: 950px;
+  max-width: 1050px;
   background: #e8e8e8;
   border-radius: 10px;
 }
@@ -54,7 +54,7 @@ app-root {
   display: block;
   margin: auto;
   width: 100%;
-  max-width: 950px;
+  max-width: 1050px;
   text-align: center;
   position: absolute;
   top: 145px;
@@ -81,7 +81,7 @@ app-root {
   position: absolute;
   height: 350px;
   width: 100%;
-  max-width: 950px;
+  max-width: 1050px;
   background: black;
   top: 0;
   border-radius: 10px;
@@ -113,17 +113,11 @@ app-root {
   font-size: 18px;
 }
 @media (max-width: 1600px) {
-  :host #project-container {
-    padding: 0 100px;
-  }
   :host #project-container #project-item-container .project-item .hidden-content {
     width: 75%;
   }
 }
 @media (max-width: 1375px) {
-  :host #project-container {
-    padding: 0 100px;
-  }
   :host #project-container #project-item-container .project-item .hidden-content {
     width: 85%;
   }
@@ -133,9 +127,6 @@ app-root {
   }
 }
 @media (max-width: 1200px) {
-  :host #project-container {
-    padding: 0 50px;
-  }
   :host #project-container #project-title {
     margin: 50px 0 0 0;
   }
@@ -144,9 +135,6 @@ app-root {
   }
 }
 @media (max-width: 992px) {
-  :host #project-container {
-    padding: 0 25px;
-  }
   :host #project-container #project-title {
     margin: 25px 0 0 0;
   }

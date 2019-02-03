@@ -11,9 +11,6 @@ app-root {
   display: block;
   padding: 100px 0;
 }
-:host #about-container {
-  padding: 0 200px;
-}
 :host #about-container #about-title {
   display: block;
   font-size: 38px;
@@ -37,9 +34,6 @@ app-root {
   
 }
 @media (max-width: 992px) {
-  :host #about-container {
-    padding: 0 200px;
-  }
   :host #about-container #about-title {
     margin: 25px 0 0 0;
   }

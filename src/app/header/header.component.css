@@ -112,26 +112,9 @@ app-root {
     visibility: visible;
   }
 }
-@media (max-width: 1300px) {
-  :host #header {
-    height: 500px;
-    width: 500px;
-    top: calc(50% - 250px);
-    left: calc(50% - 250px);
-  }
-  :host #header #header-content {
-    margin-top: 170px;
-  }
-}
 @media (max-width: 992px) {
-  :host #header {
-    height: 400px;
-    width: 400px;
-    top: calc(50% - 200px);
-    left: calc(50% - 200px);
-  }
   :host #header #header-content {
-    margin-top: 135px;
+    margin-top: 60px;
   }
   :host #header #header-content #name {
     font-size: 32px;
@@ -178,5 +161,12 @@ app-root {
   }
   :host #my-navbar .navbar-collapse .navbar-nav li a:hover {
     background: transparent;
+  }
+}
+@media (max-width: 630px) {
+  :host #header {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    left: unset;
   }
 }
