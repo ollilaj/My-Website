@@ -2,14 +2,15 @@
   <div id="services-title" class="bold">Services</div>
   <div class="underline"></div>
   <div id="services-intro">What I offer</div>
-  <div id="services-item-container" class="row">
-    <div class="service-item col-lg-4 col-md-4 col-sm-12" *ngFor="let serviceItem of serviceItems">
+  <div id="services-item-container">
+    <div class="service-item" *ngFor="let serviceItem of serviceItems">
       <div class="item-formatting" [ngStyle]="{backgroundImage: 'url(' + serviceItem.img + ')'}">
-        <div class="item-border">
+        <div class="item-info">
           <div class="service-item-title">{{serviceItem.title}}</div>
           <div class="service-item-description">{{serviceItem.description}}</div>
         </div>
       </div>
+      <div class="overlay"></div>
     </div>
   </div>
 </div>

@@ -28,16 +28,15 @@ app-root {
 }
 :host #header {
   text-align: center;
-  height: 600px;
+  height: 250px;
   width: 600px;
   position: absolute;
-  top: calc(50% - 300px);
+  top: calc(50% - 175px);
   left: calc(50% - 300px);
-  border-radius: 50%;
   border: white solid 15px;
 }
 :host #header #header-content {
-  margin-top: 215px;
+  margin-top: 43px;
 }
 :host #header #header-content #name {
   color: white;

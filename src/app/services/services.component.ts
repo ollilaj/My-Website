@@ -21,14 +21,14 @@ export class ServicesComponent implements OnInit {
         "brand and personalisation. "
       },
       {
-        "img": "assets/code.png",
+        "img": "assets/code.jpg",
         "title": "Development",
         "description": "The development process involves taking the graphical " +
         "elements defined in the design process and coding them into a clean, responsive web app, " +
         "using HTML, CSS, and Javascript. "
       },
       {
-        "img": "assets/cloud.png",
+        "img": "assets/support.jpg",
         "title": "Support",
         "description": "After the development process, I can provide hosting for your website, including " +
         "any changes that you would like to make upon filing a feature request. "
