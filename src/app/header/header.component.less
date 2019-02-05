@@ -112,19 +112,6 @@
   }
 
   @media (max-width: 992px) {
-    #header {
-
-      #header-content {
-        margin-top: 60px;
-
-        #name {
-          font-size: 32px;
-        }
-        #occupation {
-          font-size: 22px;
-        }
-      }
-    }
     #my-navbar {
       .navbar-default {
         .navbar-nav {
@@ -189,6 +176,32 @@
       width: ~"calc(100% - 30px)";
       margin: 0 15px;
       left: unset;
+    }
+  }
+
+  @media (max-width: 500px) {
+    #my-navbar {
+      .navbar-collapse {
+        .navbar-nav {
+          li {
+            a {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    #header {
+      #header-content {
+        margin-top: 60px;
+
+        #name {
+          font-size: 32px;
+        }
+        #occupation {
+          font-size: 22px;
+        }
+      }
     }
   }
 }

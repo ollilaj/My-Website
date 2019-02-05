@@ -25,13 +25,13 @@ export class ServicesComponent implements OnInit {
         "title": "Development",
         "description": "The development process involves taking the graphical " +
         "elements defined in the design process and coding them into a clean, responsive web app, " +
-        "using HTML, CSS, and Javascript. "
+        "using HTML, CSS, and JavaScript. "
       },
       {
         "img": "assets/support.jpg",
         "title": "Support",
-        "description": "After the development process, I can provide hosting for your website, including " +
-        "any changes that you would like to make upon filing a feature request. "
+        "description": "After the development process, I can provide hosting for your website and make " +
+        "any changes that you would like upon filing a feature request. "
       }
     ]
   }

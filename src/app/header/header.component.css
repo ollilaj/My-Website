@@ -113,15 +113,6 @@ app-root {
   }
 }
 @media (max-width: 992px) {
-  :host #header #header-content {
-    margin-top: 60px;
-  }
-  :host #header #header-content #name {
-    font-size: 32px;
-  }
-  :host #header #header-content #occupation {
-    font-size: 22px;
-  }
   :host #my-navbar .navbar-default .navbar-nav li {
     margin: 0 20px;
   }
@@ -168,5 +159,19 @@ app-root {
     width: calc(100% - 30px);
     margin: 0 15px;
     left: unset;
+  }
+}
+@media (max-width: 500px) {
+  :host #my-navbar .navbar-collapse .navbar-nav li a {
+    font-size: 24px;
+  }
+  :host #header #header-content {
+    margin-top: 60px;
+  }
+  :host #header #header-content #name {
+    font-size: 32px;
+  }
+  :host #header #header-content #occupation {
+    font-size: 22px;
   }
 }
