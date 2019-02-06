@@ -9,6 +9,7 @@
     margin: auto;
     width: 100%;
     max-width: 1050px;
+    padding: 0 15px;
 
     #about-title {
       display: block;
@@ -18,37 +19,24 @@
       font-weight: bold;
       color: black;
     }
-    .underline {
-      margin-bottom: 25px;
+    #about-content {
+      font-size: 18px;
+      line-height: 30px;
+
+      img {
+        float: left;
+        height: 150px;
+        width: 150px;
+        border-radius: 75px;
+        margin: 15px 25px 15px 0;
+      }
+
+      a {
+        color: @secondary-color;
+        text-decoration: underline;
+      }
     }
-    #about-description {
-      font-size: 22px;
-    }
 
-  }
-}
-
-@media (max-width: 1600px) {
-  :host {
-    #about-container {
-      padding: 0 100px;
-    }
-  }
-}
-
-@media (max-width: 1375px) {
-  :host {
-    #about-container {
-
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  :host {
-    #about-container {
-
-    }
   }
 }
 
@@ -62,12 +50,5 @@
   }
 }
 
-@media (max-width: 768px) {
-  :host {
-    #about-container {
-
-    }
-  }
-}
 
 

@@ -78,6 +78,7 @@ app-root {
   margin: auto;
   position: relative;
   z-index: 2;
+  line-height: 30px;
 }
 :host #services-container #services-item-container .service-item .overlay {
   position: absolute;

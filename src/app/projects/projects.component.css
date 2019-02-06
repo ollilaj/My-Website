@@ -111,6 +111,7 @@ app-root {
 :host #project-container #project-item-container .project-item .project-info .project-description {
   width: 100%;
   font-size: 18px;
+  line-height: 30px;
 }
 @media (max-width: 1600px) {
   :host #project-container #project-item-container .project-item .hidden-content {
