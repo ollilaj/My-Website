@@ -11,7 +11,7 @@
       display: block;
       text-align: center;
       font-size: 38px;
-      margin: 50px 0 0 0;
+      margin: 25px 0 0 0;
       font-weight: bold;
     }
     #contact-intro {
@@ -59,14 +59,16 @@
         text-align: center;
         #contact-submit {
           display: inline-block;
-          font-size: 20px;
+          font-size: 22px;
           padding: 10px 25px;
           border-radius: 5px;
           background: transparent;
           margin-top: 20px;
+          border: 2px solid @secondary-color;
+          color: black;
 
           &:hover {
-            background: @secondary-color;
+            background: @black-color;
             color: white;
           }
         }
@@ -87,9 +89,6 @@
   :host {
     #contact-container {
       padding: 0 50px;
-      #contact-title {
-        margin: 25px 0 0 0;
-      }
     }
   }
 }

@@ -15,7 +15,7 @@ app-root {
   display: block;
   font-size: 38px;
   text-align: center;
-  margin: 50px 0 0 0;
+  margin: 25px 0 0 0;
   font-weight: bold;
   color: black;
 }
@@ -93,9 +93,6 @@ app-root {
 @media (max-width: 1080px) {
   :host #services-container {
     padding: 0 15px;
-  }
-  :host #services-container #services-title {
-    margin: 25px 0 0 0;
   }
   :host #services-container #services-item-container {
     display: block;

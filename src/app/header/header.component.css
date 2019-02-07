@@ -19,7 +19,7 @@ app-root {
 
 }
 :host #header-image {
-  background: url(../../assets/city-og-2.png) no-repeat left top fixed;
+  background: url(../../assets/hancock.jpg) no-repeat left top fixed;
   background-size: cover;
   position: relative;
   top: 0;
@@ -33,8 +33,7 @@ app-root {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 10px;
-  opacity: 0.65;
+  opacity: 0.75;
 }
 :host #header {
   text-align: center;
