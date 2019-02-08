@@ -36,12 +36,11 @@
     height: 250px;
     width: 600px;
     position: absolute;
-    top: ~"calc(50% - 175px)";
+    top: ~"calc(50% - 225px)";
     left: ~"calc(50% - 300px)";
-    border: white solid 15px;
 
     #header-content {
-      margin-top: 43px;
+      margin-top: 69px;
 
       #name {
         color: @primary-color;
@@ -50,21 +49,9 @@
         padding-bottom: 10px;
       }
 
-      #divider {
-        background: @primary-color;
-        height: 1px;
-        display: block;
-        margin: auto;
-        animation: expand 500ms ease-out 5s;
-        animation-fill-mode: forwards;
-        visibility: hidden;
-        border-radius: 3px;
-      }
-
       #occupation {
         color: @primary-color;
-        font-size: 32px;
-        margin-top: 10px;
+        font-size: 24px;
         animation: fadein 3500ms ease-in 2000ms;
         animation-fill-mode: forwards;
         visibility: hidden;
@@ -73,8 +60,8 @@
   }
   #my-navbar {
     width: 100%;
-    margin: -100px 0 0 0;
-    padding: 25px 0;
+    margin: -180px 0 0 0;
+    padding: 50px 0;
     border-bottom: @secondary-color solid 3px;
 
     .navbar-default {
@@ -83,10 +70,12 @@
       margin: 0;
 
       .navbar-nav {
+        height: 80px;
         float: none;
         text-align: center;
 
         li {
+          height: 80px;
           margin: 0 50px;
           float: none;
           display: inline-block;
@@ -99,11 +88,28 @@
             font-size: 30px;
             cursor: pointer;
             border-radius: 5px;
+            margin-top: 15px;
+            border: 1px solid transparent;
+            line-height: 14px;
+            height: 50px;
             &:hover {
-              background: @secondary-color;
+              border: 1px solid @secondary-color;
             }
           }
 
+          a.logo {
+            height: 80px;
+            width: 80px;
+            border: 2px @secondary-color solid;
+            border-radius: 0;
+            color: @secondary-color;
+            font-size: 32px;
+            margin-top: 0;
+            line-height: 40px;
+            &:hover {
+              background: transparent;
+            }
+          }
         }
       }
     }
@@ -134,6 +140,9 @@
   }
 
   @media (max-width: 768px) {
+    #header {
+      top: ~"calc(50% - 150px)";
+    }
     #my-navbar {
       margin: 0;
       padding: 0;
@@ -162,18 +171,30 @@
         background: @fourth-color;
 
         .navbar-nav {
+          height: auto;
+
           li {
+            height: 60px;
             display: block;
             animation: none;
             visibility: visible;
-            margin: 0;
             padding: 5px 5px;
             text-align: left;
+            margin: 0;
+
+            &.logo {
+              display: none;
+            }
 
             a {
+              margin: 4px 0 0 0;
               &:hover {
                 background: transparent;
               }
+            }
+
+            a.logo {
+              display: none;
             }
           }
         }

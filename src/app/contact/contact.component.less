@@ -64,11 +64,11 @@
           border-radius: 5px;
           background: transparent;
           margin-top: 20px;
-          border: 2px solid @secondary-color;
+          border: 2px solid black;
           color: black;
 
           &:hover {
-            background: @black-color;
+            background: @secondary-color;
             color: white;
           }
         }
@@ -99,6 +99,12 @@
       padding: 0 25px;
 
     }
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: 50px 0;
   }
 }
 

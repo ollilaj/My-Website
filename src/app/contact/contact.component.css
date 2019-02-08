@@ -71,11 +71,11 @@ app-root {
   border-radius: 5px;
   background: transparent;
   margin-top: 20px;
-  border: 2px solid #cf3d3e;
+  border: 2px solid black;
   color: black;
 }
 :host #contact-container #contact-form #submit-container #contact-submit:hover {
-  background: #0e0e0e;
+  background: #cf3d3e;
   color: white;
 }
 @media (max-width: 1375px) {
@@ -91,5 +91,10 @@ app-root {
 @media (max-width: 992px) {
   :host #contact-container {
     padding: 0 25px;
+  }
+}
+@media (max-width: 768px) {
+  :host {
+    padding: 50px 0;
   }
 }

@@ -40,12 +40,11 @@ app-root {
   height: 250px;
   width: 600px;
   position: absolute;
-  top: calc(50% - 175px);
+  top: calc(50% - 225px);
   left: calc(50% - 300px);
-  border: white solid 15px;
 }
 :host #header #header-content {
-  margin-top: 43px;
+  margin-top: 69px;
 }
 :host #header #header-content #name {
   color: white;
@@ -53,28 +52,17 @@ app-root {
   animation: fadein 5s ease-in 0s;
   padding-bottom: 10px;
 }
-:host #header #header-content #divider {
-  background: white;
-  height: 1px;
-  display: block;
-  margin: auto;
-  animation: expand 500ms ease-out 5s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-  border-radius: 3px;
-}
 :host #header #header-content #occupation {
   color: white;
-  font-size: 32px;
-  margin-top: 10px;
+  font-size: 24px;
   animation: fadein 3500ms ease-in 2000ms;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
 :host #my-navbar {
   width: 100%;
-  margin: -100px 0 0 0;
-  padding: 25px 0;
+  margin: -180px 0 0 0;
+  padding: 50px 0;
   border-bottom: #cf3d3e solid 3px;
 }
 :host #my-navbar .navbar-default {
@@ -83,10 +71,12 @@ app-root {
   margin: 0;
 }
 :host #my-navbar .navbar-default .navbar-nav {
+  height: 80px;
   float: none;
   text-align: center;
 }
 :host #my-navbar .navbar-default .navbar-nav li {
+  height: 80px;
   margin: 0 50px;
   float: none;
   display: inline-block;
@@ -99,9 +89,26 @@ app-root {
   font-size: 30px;
   cursor: pointer;
   border-radius: 5px;
+  margin-top: 15px;
+  border: 1px solid transparent;
+  line-height: 14px;
+  height: 50px;
 }
 :host #my-navbar .navbar-default .navbar-nav li a:hover {
-  background: #cf3d3e;
+  border: 1px solid #cf3d3e;
+}
+:host #my-navbar .navbar-default .navbar-nav li a.logo {
+  height: 80px;
+  width: 80px;
+  border: 2px #cf3d3e solid;
+  border-radius: 0;
+  color: #cf3d3e;
+  font-size: 32px;
+  margin-top: 0;
+  line-height: 40px;
+}
+:host #my-navbar .navbar-default .navbar-nav li a.logo:hover {
+  background: transparent;
 }
 @keyframes fadein {
   from {
@@ -127,6 +134,9 @@ app-root {
   }
 }
 @media (max-width: 768px) {
+  :host #header {
+    top: calc(50% - 150px);
+  }
   :host #my-navbar {
     margin: 0;
     padding: 0;
@@ -151,16 +161,29 @@ app-root {
     border-color: transparent;
     background: dimgray;
   }
+  :host #my-navbar .navbar-collapse .navbar-nav {
+    height: auto;
+  }
   :host #my-navbar .navbar-collapse .navbar-nav li {
+    height: 60px;
     display: block;
     animation: none;
     visibility: visible;
-    margin: 0;
     padding: 5px 5px;
     text-align: left;
+    margin: 0;
+  }
+  :host #my-navbar .navbar-collapse .navbar-nav li.logo {
+    display: none;
+  }
+  :host #my-navbar .navbar-collapse .navbar-nav li a {
+    margin: 4px 0 0 0;
   }
   :host #my-navbar .navbar-collapse .navbar-nav li a:hover {
     background: transparent;
+  }
+  :host #my-navbar .navbar-collapse .navbar-nav li a.logo {
+    display: none;
   }
 }
 @media (max-width: 630px) {
