@@ -13,7 +13,7 @@
   }*/
 
   #header-image {
-    background: url(../../assets/hancock.jpg) no-repeat left top fixed;
+    background: url(../../assets/city-buildings.jpg) no-repeat left top fixed;
     background-size: cover;
     position: relative;
     top: 0;
@@ -100,14 +100,25 @@
           a.logo {
             height: 80px;
             width: 80px;
-            border: 2px @secondary-color solid;
+            border: 5px @secondary-color solid;
             border-radius: 0;
             color: @secondary-color;
-            font-size: 32px;
+            font-size: 27px;
             margin-top: 0;
             line-height: 40px;
+            transition: transform 0.4s ease-in-out;
             &:hover {
-              background: transparent;
+              transform: rotate(90deg);
+              transition: transform 0.4s ease-in-out;
+              div {
+                transform: rotate(-90deg);
+                transform-origin: center;
+              }
+            }
+            div {
+              height: 100%;
+              width: 100%;
+              transition: transform 0.4s ease-in-out;
             }
           }
         }
@@ -127,12 +138,24 @@
       visibility: visible; }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     #my-navbar {
       .navbar-default {
         .navbar-nav {
           li {
             margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    #my-navbar {
+      .navbar-default {
+        .navbar-nav {
+          li {
+            margin: 0 10px;
           }
         }
       }
@@ -190,6 +213,7 @@
               margin: 4px 0 0 0;
               &:hover {
                 background: transparent;
+                border: 0;
               }
             }
 

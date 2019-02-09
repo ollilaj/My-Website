@@ -19,7 +19,7 @@ app-root {
 
 }
 :host #header-image {
-  background: url(../../assets/hancock.jpg) no-repeat left top fixed;
+  background: url(../../assets/city-buildings.jpg) no-repeat left top fixed;
   background-size: cover;
   position: relative;
   top: 0;
@@ -100,15 +100,26 @@ app-root {
 :host #my-navbar .navbar-default .navbar-nav li a.logo {
   height: 80px;
   width: 80px;
-  border: 2px #cf3d3e solid;
+  border: 5px #cf3d3e solid;
   border-radius: 0;
   color: #cf3d3e;
-  font-size: 32px;
+  font-size: 27px;
   margin-top: 0;
   line-height: 40px;
+  transition: transform 0.4s ease-in-out;
 }
 :host #my-navbar .navbar-default .navbar-nav li a.logo:hover {
-  background: transparent;
+  transform: rotate(90deg);
+  transition: transform 0.4s ease-in-out;
+}
+:host #my-navbar .navbar-default .navbar-nav li a.logo:hover div {
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+:host #my-navbar .navbar-default .navbar-nav li a.logo div {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
 }
 @keyframes fadein {
   from {
@@ -128,9 +139,14 @@ app-root {
     visibility: visible;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   :host #my-navbar .navbar-default .navbar-nav li {
     margin: 0 20px;
+  }
+}
+@media (max-width: 900px) {
+  :host #my-navbar .navbar-default .navbar-nav li {
+    margin: 0 10px;
   }
 }
 @media (max-width: 768px) {
@@ -181,6 +197,7 @@ app-root {
   }
   :host #my-navbar .navbar-collapse .navbar-nav li a:hover {
     background: transparent;
+    border: 0;
   }
   :host #my-navbar .navbar-collapse .navbar-nav li a.logo {
     display: none;

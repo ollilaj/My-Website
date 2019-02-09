@@ -69,14 +69,14 @@ app-root {
   font-size: 22px;
   padding: 10px 25px;
   border-radius: 5px;
-  background: transparent;
+  background: #cf3d3e;
   margin-top: 20px;
   border: 2px solid black;
-  color: black;
+  color: white;
 }
 :host #contact-container #contact-form #submit-container #contact-submit:hover {
-  background: #cf3d3e;
-  color: white;
+  background: transparent;
+  color: black;
 }
 @media (max-width: 1375px) {
   :host #contact-container {

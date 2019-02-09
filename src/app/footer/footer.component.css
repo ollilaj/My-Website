@@ -9,7 +9,7 @@ app-root {
 }
 :host {
   display: block;
-  background: #3b3b3d;
+  background: #181818;
   padding: 50px 0 40px 0;
 }
 :host #footer-container {
@@ -21,7 +21,7 @@ app-root {
 :host #footer-container #footer-item-container .footer-item {
   display: inline-block;
   margin: 0 25px;
-  background: black;
+  background: #cf3d3e;
   height: 70px;
   width: 70px;
   border-radius: 35px;
@@ -33,7 +33,7 @@ app-root {
   left: 0;
 }
 :host #footer-container #footer-item-container .footer-item a:hover {
-  color: #cf3d3e;
+  color: black;
 }
 :host #footer-container #footer-item-container .footer-item a mat-icon {
   transform: scale(1.5);
