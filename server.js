@@ -1,8 +1,16 @@
+// Libraries
 const express = require("express");
 const path = require('path');
 const bodyParser = require("body-parser");
+const dotenv = require('dotenv');
+
+// Load env variables
+dotenv.config();
+
+// Vars
 const app = express();
 const api = require('./server/api.js');
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -19,6 +27,6 @@ app.get('*', function(req, res) {
 });
 
 // Start express server
-app.listen(3000, function(){
-  console.log("Server is listening on port 3000");
+app.listen(port, function(){
+  console.log("Server is listening on port " + port);
 });

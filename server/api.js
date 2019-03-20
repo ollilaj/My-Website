@@ -6,8 +6,8 @@ const fs = require('fs');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'jakeowebsite@gmail.com',
-    pass: 'Lacrosse1!'
+    user: process.env.MY_WEBSITE_GMAIL,
+    pass: process.env.MY_WEBSITE_GMAIL_PASSWORD
   }
 });
 
@@ -15,7 +15,7 @@ router.post('/send-email', function(req, res){
 
   let mailOptions = {
     from: req.body.email,
-    to: 'jake.ollila@gmail.com',
+    to: process.env.MY_PERSONAL_GMAIL,
     subject: 'Freelance Prospect: ' + req.body.name,
     text: req.body.message + ". From: " + req.body.email
   };
