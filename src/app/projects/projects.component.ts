@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
         "name": "Jumla",
         "tags": "Design / Front End Development / Back End Development",
         "image": "assets/jumla-collage.png",
-        "description": "Jumla is the ultimate place to keep up to date with favorite celebrities. " +
+        "description": "Jumla is the ultimate place to keep up to date with your favorite celebrities. " +
           "Explore recent news and their social media prescence in this all-encompassing web app.",
         "link": "https://jakeollila.space"
       }
