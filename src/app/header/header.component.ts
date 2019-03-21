@@ -46,8 +46,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   onResize(event) : void {
     //particlesJS.load('particles-js', 'assets/particles.json', null);
-    this.headerImage.nativeElement.setAttribute("style", "width:" + event.target.innerWidth + "px");
-    this.headerImage.nativeElement.setAttribute("style", "height:" + event.target.innerHeight + "px");
+    //this.headerImage.nativeElement.setAttribute("style", "width:" + event.target.innerWidth + "px");
+    //this.headerImage.nativeElement.setAttribute("style", "height:" + event.target.innerHeight + "px");
   }
 
 }
