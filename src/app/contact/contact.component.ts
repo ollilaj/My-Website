@@ -71,7 +71,7 @@ export class ContactComponent implements OnInit {
       );
       this.emailForm.reset();
     } else {
-      this.validateAllFormFields(); //{7}
+      this.validateAllFormFields();
     }
   }
 
