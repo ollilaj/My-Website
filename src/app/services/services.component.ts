@@ -9,7 +9,7 @@ export class ServicesComponent implements OnInit {
 
   public serviceItems = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.serviceItems = [
@@ -18,20 +18,23 @@ export class ServicesComponent implements OnInit {
         "title": "Design",
         "description": "The website design process starts with sketched page layouts and wire-frames. " +
         "Pending your feedback, digital blueprints are then created, incorporating your company's " +
-        "brand and personalisation. "
+        "brand and personalisation. ",
+        "inView": false
       },
       {
         "img": "assets/code.jpg",
         "title": "Development",
         "description": "The development process involves taking the graphical " +
         "elements defined in the design process and coding them into a clean, responsive web app, " +
-        "using HTML, CSS, and JavaScript. "
+        "using HTML, CSS, and JavaScript. ",
+        "inView": false
       },
       {
         "img": "assets/support.jpg",
         "title": "Support",
         "description": "After the development process, I can provide hosting for your website and make " +
-        "any changes that you would like upon filing a feature request. "
+        "any changes that you would like upon filing a feature request. ",
+        "inView": false
       }
     ]
   }

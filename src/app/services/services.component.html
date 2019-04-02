@@ -3,7 +3,7 @@
   <div class="underline"></div>
   <div id="services-intro">What I can do for you</div>
   <div id="services-item-container">
-    <div class="service-item" *ngFor="let serviceItem of serviceItems">
+    <div class="service-item" *ngFor="let serviceItem of serviceItems" addClassWhenInView>
       <div class="item-formatting" [ngStyle]="{backgroundImage: 'url(' + serviceItem.img + ')'}">
         <div class="item-info">
           <div class="service-item-title">{{serviceItem.title}}</div>

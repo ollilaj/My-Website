@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +10,7 @@ export class ProjectsComponent implements OnInit {
 
   public projects = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.projects = [

@@ -159,7 +159,7 @@ app-root {
     border-bottom: 0;
   }
   :host #my-navbar .navbar-header {
-    background: dimgray;
+    background: #404040;
     border-bottom: 3px solid #cf3d3e;
   }
   :host #my-navbar .navbar-header .navbar-toggle {
@@ -175,7 +175,7 @@ app-root {
   }
   :host #my-navbar .navbar-collapse {
     border-color: transparent;
-    background: dimgray;
+    background: #404040;
   }
   :host #my-navbar .navbar-collapse .navbar-nav {
     height: auto;

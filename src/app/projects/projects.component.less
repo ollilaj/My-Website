@@ -28,7 +28,7 @@
           background: #E8E8E8;
           border-radius: 10px;
 
-          &:hover {
+          &:hover, &.inView {
             .project-see-more {
               opacity: 1;
               transition: 1s;
@@ -70,7 +70,7 @@
               border: 2px outset @secondary-color;
               border-image: initial;
 
-              &:hover {
+              &:hover, &.inView {
                 color: white;
                 background: @secondary-color;
               }

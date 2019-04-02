@@ -63,3 +63,11 @@ app-root {
     padding: 0 25px;
   }
 }
+@media (max-width: 600px) {
+  :host #footer-container {
+    padding: 0 10px;
+  }
+  :host #footer-container #footer-item-container .footer-item {
+    margin: 0 10px;
+  }
+}

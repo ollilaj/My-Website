@@ -34,11 +34,13 @@ app-root {
   background: #e8e8e8;
   border-radius: 10px;
 }
-:host #project-container #project-item-container .project-item .project-image-cont:hover .project-see-more {
+:host #project-container #project-item-container .project-item .project-image-cont:hover .project-see-more,
+:host #project-container #project-item-container .project-item .project-image-cont.inView .project-see-more {
   opacity: 1;
   transition: 1s;
 }
-:host #project-container #project-item-container .project-item .project-image-cont:hover .overlay {
+:host #project-container #project-item-container .project-item .project-image-cont:hover .overlay,
+:host #project-container #project-item-container .project-item .project-image-cont.inView .overlay {
   opacity: .65;
   transition: 1s;
 }
@@ -73,7 +75,8 @@ app-root {
   border: 2px outset #cf3d3e;
   border-image: initial;
 }
-:host #project-container #project-item-container .project-item .project-image-cont .project-see-more a:hover {
+:host #project-container #project-item-container .project-item .project-image-cont .project-see-more a:hover,
+:host #project-container #project-item-container .project-item .project-image-cont .project-see-more a.inView {
   color: white;
   background: #cf3d3e;
 }

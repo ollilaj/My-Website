@@ -42,10 +42,12 @@ app-root {
   margin: 0 15px;
   position: relative;
 }
-:host #services-container #services-item-container .service-item:hover .item-formatting .item-info {
+:host #services-container #services-item-container .service-item:hover .item-formatting .item-info,
+:host #services-container #services-item-container .service-item.inView .item-formatting .item-info {
   top: 0;
 }
-:host #services-container #services-item-container .service-item:hover .item-formatting .item-info .service-item-title {
+:host #services-container #services-item-container .service-item:hover .item-formatting .item-info .service-item-title,
+:host #services-container #services-item-container .service-item.inView .item-formatting .item-info .service-item-title {
   margin: 0 0 25px 0;
 }
 :host #services-container #services-item-container .service-item .item-formatting {
