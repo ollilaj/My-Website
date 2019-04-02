@@ -19,7 +19,7 @@ app-root {
 
 }
 :host #header-image {
-  background: url(../../assets/city-buildings.jpg) no-repeat left top fixed;
+  background: url(../../assets/city-buildings.webp) no-repeat left top fixed;
   background-size: cover;
   position: relative;
   top: 0;
@@ -33,7 +33,7 @@ app-root {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 :host #header {
   text-align: center;
@@ -159,7 +159,7 @@ app-root {
     border-bottom: 0;
   }
   :host #my-navbar .navbar-header {
-    background: #404040;
+    background: #333333;
     border-bottom: 3px solid #cf3d3e;
   }
   :host #my-navbar .navbar-header .navbar-toggle {
@@ -175,7 +175,7 @@ app-root {
   }
   :host #my-navbar .navbar-collapse {
     border-color: transparent;
-    background: #404040;
+    background: #333333;
   }
   :host #my-navbar .navbar-collapse .navbar-nav {
     height: auto;
