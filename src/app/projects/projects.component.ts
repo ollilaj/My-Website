@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
         "image": "assets/jumla-collage.png",
         "description": "Jumla is the ultimate place to keep up to date with your favorite celebrities. " +
           "Explore recent news and their social media prescence in this all-encompassing web app.",
-        "link": "http://jumla.link"
+        "link": "https://github.com/ollilaj/Jumla"
       }
     ]
   }
