@@ -1,14 +1,18 @@
 body, html {
   margin: 0;
-  padding: 0;
-  height: 100%;
+}
+
+body {
   width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
   display: grid;
   grid-template-areas:
         "header"
         "intro"
         "projects"
         "work";
+  grid-row-gap: 150px;
 }
 
 @font-face {
@@ -21,14 +25,15 @@ body, html {
   src: url('assets/GlacialIndifference-Regular.otf') format("opentype");
 }
 
-@font-face {
-  font-family: 'FuturaPTLight';
-  src: url('assets/FuturaPTLight.otf') format("opentype");
-}
-
 * {
   font-family: 'Glacial Indifference', sans-serif;
   font-size: 24px;
+}
+
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 h1 {
@@ -42,6 +47,10 @@ h2 {
   font-family: 'Kollektif', sans-serif;
   font-size: 24px;
   font-weight: bold;
+  margin: 25px 0 15px;
+}
+
+p {
   margin: 15px 0;
 }
 
@@ -61,20 +70,12 @@ ul li {
   padding-inline-start: 10px;
 }
 
-section:not(#header) {
-  padding: 100px 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 15px;
-}
+/* Header */
 
 #header {
   grid-area: header;
   text-align: center;
-  margin: 50px auto;
+  padding: 50px 0 0;
 }
 
 #header #logo {
@@ -119,31 +120,23 @@ section:not(#header) {
 
 #projects {
   grid-area: projects;
+  display: grid;
+  grid-row-gap: 30px;
 }
 
 #projects #projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 50px;
 }
 
 #projects #projects-container .project img {
-  grid-area: picture;
   width: 100%;
   height: auto;
-  padding: 2em 0;
+  display: block;
 }
 
-#projects #projects-container .project img:hover {
-  filter: none;
-}
-
-#projects #projects-container .project .name {
-  grid-area: name;
-}
-
-#projects #projects-container .project .description {
-  grid-area: description;
+#projects #projects-container .project p {
   margin: 0;
 }
 
@@ -159,36 +152,35 @@ section:not(#header) {
 
 #work-experience {
   grid-area: work;
+  display: grid;
+  grid-row-gap: 30px;
 }
 
 #work-experience #work-experience-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 50px;
 }
 
 #work-experience #work-experience-container .work-experience-item img {
   height: 100px;
   width: auto;
-  padding-top: 2em;
-}
-
-#work-experience #work-experience-container .work-experience-item ul {
-  margin-bottom: 0;
+  display: block;
 }
 
 /* Footer */
 
 #footer {
-
+  border-top: 1px solid #e3e3e3;
+  padding: 30px 0 50px;
 }
 
 @media screen and (max-width: 1000px) {
-  section:not(#header) {
-    padding: 50px 0;
+  body {
+    grid-row-gap: 50px;
   }
   #header {
-    margin: 25px auto;
+    padding-top: 25px;
   }
   #intro #intro-container #text {
     padding: 0 25px;
@@ -219,16 +211,10 @@ section:not(#header) {
   }
   #projects #projects-container {
     grid-template-columns: 1fr;
-    grid-row-gap: 2em;
-  }
-  #projects #projects-container .project img {
-    padding: 1em 0;
+    grid-row-gap: 50px;
   }
   #work-experience #work-experience-container {
     grid-template-columns: 1fr;
-    grid-row-gap: 2em;
-  }
-  #work-experience #work-experience-container .work-experience-item img {
-    padding-top: 1em;
+    grid-row-gap: 50px;
   }
 }
