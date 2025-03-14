@@ -21,8 +21,6 @@
             <img src="assets/logo-full-black.svg" id="name-logo-small">
             <p id="little-more-about-me">
                 I'm a Software Engineer based out of Boston, MA.
-                <br>
-                I have a passion for coding and creating innovative solutions.
             </p>
         </div>
     </div>
@@ -32,19 +30,29 @@
     <h1>My Latest Projects</h1>
     <div id="projects-container">
         <div class="project">
+            <img src="assets/findr.png"/>
+            <h2>Findr</h2>
+            <p>As a personal project, I built a Chrome Extension for finding terms in a webpage similar the Find tool,
+                but with case sensitive and regular expression search capabilities.</p>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+            </ul>
+            <a href="https://chromewebstore.google.com/detail/findr-a-better-ctrl-+-f/hemgapgjebojecgebilplmiejidbccdg" target="_blank">View on Chrome Web Store</a>
+        </div>
+        <div class="project">
             <img src="assets/flykeeper.png"/>
             <h2>Flykeeper</h2>
-            <p>As a personal project I made a website that allows fly fishermen to share their
+            <p>As a personal project, I made a website that allows fly fishermen to share their
                 fly patterns, and discover new patterns shared by other users.</p>
             <ul>
-                <li>Angular</li>
+                <li>React</li>
                 <li>Node.js</li>
                 <li>Sequelize</li>
                 <li>MySQL</li>
                 <li>AWS EC2, S3, Cognito</li>
                 <li>HTML & SCSS/CSS</li>
             </ul>
-            <a href="http://theflykeeper.com" target="_blank">View Site</a>
         </div>
         <div class="project">
             <img src="assets/shorestein-says.png"/>
@@ -58,21 +66,6 @@
                 <li>Bluehost</li>
                 <li>HTML & LESS/CSS</li>
             </ul>
-            <a href="https://www.shoresteinsays.com" target="_blank">View Site</a>
-        </div>
-        <div class="project">
-            <img src="assets/jumla.png"/>
-            <h2>Jumla</h2>
-            <p>As a personal project, I built a web app that collects data from several different social
-                media sites and aggregates them into a single feed.</p>
-            <ul>
-                <li>Angular</li>
-                <li>Node.js</li>
-                <li>MySQL</li>
-                <li>AWS EC2</li>
-                <li>HTML & LESS/CSS</li>
-            </ul>
-            <a href="https://github.com/ollilaj/Jumla" target="_blank">View on GitHub</a>
         </div>
     </div>
 </section>
@@ -81,15 +74,39 @@
     <h1>Work History</h1>
     <div id="work-experience-container">
         <div class="work-experience-item">
-            <img src="assets/ekotrope.png"/>
-            <h2>Ekotrope</h2>
-            <div>Software Engineer II</div>
-            <div><i>November 2018 - Present</i></div>
+            <img src="assets/morning-consult.png"/>
+            <h2>Morning Consult</h2>
+            <div>Software Engineer III</div>
+            <div><i>May 2024 - Present</i></div>
             <p>Responsibilities & Achievements:</p>
             <ul>
-                <li>Identified and implemented performance improvements for Ekotrope's web application. Improvements
-                    included stripping out unnecessary energy model simulations and doing the simulations across
-                    multiple threads in Java.
+                <li>Designed and implemented Data Export solution using AWS Step Functions to support long-running file export processes.</li>
+                <li>Improved API response times and reduced load on other microservices by identifying unnecessary requests with Datadog APM.</li>
+                <li>Taught other developers how to leverage serverless infrastructure in their own work.</li>
+            </ul>
+        </div>
+        <div class="work-experience-item">
+          <img src="assets/morning-consult.png"/>
+          <h2>Morning Consult</h2>
+          <div>Software Engineer II</div>
+          <div><i>May 2022 - May 2024</i></div>
+          <p>Responsibilities & Achievements:</p>
+          <ul>
+              <li>Designed and implemented Node.js REST APIs using Hapi and Fastify, which queried PostgreSQL databases and requested data from other microservices.</li>
+              <li>Built intuitive frontend solutions using React, React Query and styled components.</li>
+              <li>Migrated microservices in legacy AWS EKS cluster to AWS Control Tower EKS clusters to facilitate scalability and efficiency.</li>
+              <li>Improved GitLab CI pipelines by integrating with Renovate for automated dependency updates.</li>
+          </ul>
+      </div>
+        <div class="work-experience-item">
+            <img src="assets/ekotrope.png"/>
+            <h2>Ekotrope</h2>
+            <div>Software Engineer I/II</div>
+            <div><i>November 2018 - May 2022</i></div>
+            <p>Responsibilities & Achievements:</p>
+            <ul>
+                <li>Identified and implemented performance improvements by stripping out unnecessary energy model simulations,
+                    and by performing the simulations across multiple threads in Java.
                 </li>
                 <li>During periods of high latency, I used VisualVM and other tools to profile the application and track
                     down issues.
@@ -97,30 +114,6 @@
                 <li>Researched and integrated a new e2e testing framework (Cypress) into the existing CI/CD pipeline to
                     replace Selenium.
                 </li>
-            </ul>
-        </div>
-        <div class="work-experience-item">
-            <img src="assets/clearsurance.svg"/>
-            <h2>Clearsurance</h2>
-            <div>Full-Stack Developer</div>
-            <div><i>May 2018 - November 2018</i></div>
-            <p>Responsibilities & Achievements:</p>
-            <ul>
-                <li>Research and development for QA automation to facilitate continuous integration.</li>
-                <li>Implemented a Node.js script that was responsible for build version labeling.</li>
-                <li>Addressed application bugs as needed in Clearsurance MEAN stack application.</li>
-            </ul>
-        </div>
-        <div class="work-experience-item">
-            <img src="assets/ekotrope.png"/>
-            <h2>Ekotrope</h2>
-            <div>Front End Developer (Co-op)</div>
-            <div><i>September 2017 - December 2017</i></div>
-            <p>Responsibilities & Achievements:</p>
-            <ul>
-                <li>Created digital representations of reports/certificates using Java (GWT), CSS.</li>
-                <li>Addressed application bugs as needed.</li>
-                <li>Participated in daily Scrums and weekly Agile Retrospective meetings.</li>
             </ul>
         </div>
     </div>
@@ -132,4 +125,3 @@
 </section>
 </body>
 </html>
-

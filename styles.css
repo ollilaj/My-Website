@@ -96,7 +96,7 @@ ul li {
 }
 
 #intro #intro-container #me {
-  width: 300px;
+  width: 100%;
   margin: auto;
   height: auto;
   border-radius: 100%;
@@ -106,8 +106,6 @@ ul li {
 #intro #intro-container #text {
   padding: 0 100px;
   border-right: 7px solid black;
-  border-top: 7px solid white;
-  border-bottom: 7px solid white;
 }
 
 #intro #intro-container #text #name-logo-small {
@@ -131,9 +129,12 @@ ul li {
 }
 
 #projects #projects-container .project img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
   display: block;
+  background: #F5F5F5;
 }
 
 #projects #projects-container .project p {
@@ -176,9 +177,6 @@ ul li {
 }
 
 @media screen and (max-width: 1000px) {
-  body {
-    grid-row-gap: 50px;
-  }
   #header {
     padding-top: 25px;
   }
@@ -189,11 +187,24 @@ ul li {
 
 @media screen and (max-width: 850px) {
   #intro #intro-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 150px 1fr;
+    column-gap: 20px;
   }
   #intro #intro-container #text {
-    padding-right: 25px;
-    padding-left: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+  }
+  #intro #intro-container #text #name-logo-small {
+    width: 175px;
+  }
+  #projects #projects-container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 100px;
+  }
+  #work-experience #work-experience-container {
+    grid-template-columns: 1fr;
+    grid-row-gap: 100px;
   }
 }
 
@@ -203,18 +214,5 @@ ul li {
   }
   #intro #intro-container #text #name-logo-large {
     display: none;
-  }
-  #intro #intro-container #text {
-    padding: 0;
-    border: 0;
-    text-align: center;
-  }
-  #projects #projects-container {
-    grid-template-columns: 1fr;
-    grid-row-gap: 50px;
-  }
-  #work-experience #work-experience-container {
-    grid-template-columns: 1fr;
-    grid-row-gap: 50px;
   }
 }
